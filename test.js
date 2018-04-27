@@ -3,7 +3,7 @@
  *
  * @author Justin Collier <jpcxme@gmail.com>
  * @see {@link http://github.com/jpcx/deep-props|GitHub}
- * @license ISC
+ * @license MIT
  */
 
 'use strict'
@@ -19,7 +19,7 @@
  */
 const dirDeep = x => console.dir(x, { depth: null, colors: true })
 
-const tree = require('./')
+const props = require('./')
 
 const assert = require('assert')
 
@@ -62,7 +62,7 @@ tests.push(() => {
         value: data.foo.bar.baz.beh
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -99,7 +99,7 @@ tests.push(() => {
         value: data[0][0][0][0]
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -144,7 +144,7 @@ tests.push(() => {
         value: data.get('foo').get('bar').get('baz').get('beh')
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -181,7 +181,7 @@ tests.push(() => {
         value: [...[...[...[...data][0]][0]][0]][0]
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -214,7 +214,7 @@ tests.push(() => {
         value: [...data.foo[0].get('bar')][0]
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -234,7 +234,7 @@ tests.push(() => {
   const data = new WeakMap().set(wmKey, wmVal)
   operations.push({
     expect: [],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -295,7 +295,7 @@ tests.push(() => {
         value: data.baz.quz.dolor
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -356,7 +356,7 @@ tests.push(() => {
         value: data[2][0][0]
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -439,7 +439,7 @@ tests.push(() => {
         value: data.get('baz').get('quz').get('dolor')
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -475,7 +475,7 @@ tests.push(() => {
         ref: { path: [] }
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -538,7 +538,7 @@ tests.push(() => {
     ],
     result: () => {
       const compilation = []
-      for (let result of tree(data, { gen: true })) {
+      for (let result of props(data, { gen: true })) {
         compilation.push(result)
       }
       return compilation
@@ -564,7 +564,7 @@ tests.push(() => {
   operations.push({
     expect: true,
     result: () => {
-      const t = tree(data, { full: true })
+      const t = props(data, { full: true })
 
       const anyMissingDescriptors = t.some(
         prop => {
@@ -678,7 +678,7 @@ tests.push(() => {
     expect: true,
     result: () => {
       const t = []
-      for (let result of tree(data, { full: true, gen: true })) {
+      for (let result of props(data, { full: true, gen: true })) {
         t.push(result)
       }
 
@@ -811,7 +811,7 @@ tests.push(() => {
         value: null
       }
     ],
-    result: () => tree(data, { inherited: true })
+    result: () => props(data, { inherited: true })
   })
   return { data, description, operations }
 })
@@ -870,7 +870,7 @@ tests.push(() => {
         parentIsExtensible: true
       }
     ],
-    result: () => tree(data, { full: true, proto: true })
+    result: () => props(data, { full: true, proto: true })
   })
   return { data, description, operations }
 })
@@ -899,7 +899,7 @@ tests.push(() => {
     expect: [
       { path: [ 'foo', 'bar', 'baz' ], value: data.foo.bar.baz }
     ],
-    result: () => tree(data, { nonEnumerable: true })
+    result: () => props(data, { nonEnumerable: true })
   })
   return { data, description, operations }
 })
@@ -975,7 +975,7 @@ tests.push(() => {
         value: 'bar'
       }
     ],
-    result: () => tree(data)
+    result: () => props(data)
   })
   return { data, description, operations }
 })
@@ -1080,7 +1080,7 @@ tests.push(() => {
       }
     ],
     result: () => {
-      return tree(data, {
+      return props(data, {
         propsCustomizer: target => {
           if (target instanceof NonNativeDataStructure) {
             return (
@@ -1206,7 +1206,7 @@ tests.push(() => {
       }
     ],
     result: () => {
-      return tree(data, {
+      return props(data, {
         propsCustomizer: target => {
           if (target instanceof NonNativeDataStructure) {
             return (
@@ -1270,7 +1270,7 @@ tests.push(() => {
         value: data.foo.bar
       }
     ],
-    result: () => tree(data, { inherited: true })
+    result: () => props(data, { inherited: true })
   })
 
   operations.push({
@@ -1289,7 +1289,7 @@ tests.push(() => {
         value: data.foo.bar
       }
     ],
-    result: () => tree(data, { inherited: true, includeRefValues: true })
+    result: () => props(data, { inherited: true, includeRefValues: true })
   })
 
   operations.push({
@@ -1299,7 +1299,7 @@ tests.push(() => {
         value: Object.getPrototypeOf(Object.getPrototypeOf(data))
       }
     ],
-    result: () => tree(data, { inherited: true, own: false })
+    result: () => props(data, { inherited: true, own: false })
   })
 
   operations.push({
@@ -1313,7 +1313,7 @@ tests.push(() => {
         value: data.foo.hidden
       }
     ],
-    result: () => tree(data, { nonEnumerable: true })
+    result: () => props(data, { nonEnumerable: true })
   })
 
   operations.push({
@@ -1326,7 +1326,7 @@ tests.push(() => {
         parentIsExtensible: true
       }
     ],
-    result: () => tree(data, { permissions: true })
+    result: () => props(data, { permissions: true })
   })
 
   operations.push({
@@ -1339,7 +1339,7 @@ tests.push(() => {
         configurable: true
       }
     ],
-    result: () => tree(data, { descriptors: true })
+    result: () => props(data, { descriptors: true })
   })
 
   operations.push({
@@ -1347,7 +1347,7 @@ tests.push(() => {
       { path: ['foo'], value: data.foo },
       { path: [ 'foo', 'bar' ], value: data.foo.bar }
     ],
-    result: () => tree(data, { stepwise: true })
+    result: () => props(data, { stepwise: true })
   })
   return { data, description, operations }
 })
