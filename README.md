@@ -4,7 +4,7 @@
 
 Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
 
-Endpoints may be previously discovered object references, primitives, or objects whose children are inaccessible due to settings.
+Endpoints may be previously discovered object references, primitives, or objects whose children are inaccessible due to settings or otherwise.
 
 Avoids recursion by using a task queue; very deep objects may be traversed without hitting the stack limit.
 
