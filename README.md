@@ -16,7 +16,7 @@ It supports the following container types automatically:
   <li> Set
 </ul>
 
-Circular references or otherwise duplicate references to objects will be signified using a 'ref' property, rather than a value. See the [return details](#RefAt).
+Circular references or otherwise duplicate references to objects will be signified using a 'ref' property, rather than a value. See the [return details](#PropAt).
 
 Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropsCustomizer).
 
