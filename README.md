@@ -24,7 +24,7 @@ Any unsupported data structure may be accessed by supplying a customizer functio
 
 ### Prerequisites
 
-Node.JS version 6.0.0 or above.
+Node.JS version 8.7.0 or above.
 
 ### Installing
 
