@@ -227,4 +227,4 @@ Versioned using [SemVer](http://semver.org/). For available versions, see the [t
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jpcx/deep-props/blob/master/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/master/LICENSE) file for details
