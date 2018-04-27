@@ -2,23 +2,15 @@
 
 [![NPM](https://nodei.co/npm/deep-props.png)](https://nodei.co/npm/deep-props/)
 
-Creates an array of deep paths and properties associated with an object. Non-recursively iterates through unpacked children until an endpoint is reached. Optionally traverses prototypes and non-enumerable properties. Endpoints may be previously discovered object references, primitives, or objects without children.
+Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
 
-This is a small utility (2.4 KB minified) which can extract values from deeply nested data structures. 
+Endpoints may be previously discovered object references, primitives, or objects whose children are inaccessible due to settings.
 
 Avoids recursion by using a task queue; very deep objects may be traversed without hitting the stack limit.
 
-It supports the following container types automatically:
-<ul>
-  <li> Object
-  <li> Array
-  <li> Map
-  <li> Set
-</ul>
+Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropsCustomizer).
 
 Circular references or otherwise duplicate references to objects will be signified using a 'ref' property, rather than a value. See the [return details](#PropAt).
-
-Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropsCustomizer).
 
 ## Getting Started
 
