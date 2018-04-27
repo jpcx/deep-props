@@ -1,6 +1,6 @@
 {
   "name": "deep-props",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Creates an array of deep paths and properties associated with an object. Iterates through unpacked property values until an endpoint is reached. Optionally traverses prototypes and non-enumerable properties. Endpoints may be previously discovered references, primitives, or objects without children. A custom unpacking function may be supplied.",
   "engines": {
     "node": ">=8.7.0"
