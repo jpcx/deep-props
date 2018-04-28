@@ -190,7 +190,7 @@ genPropsFromDescriptorEntries(
 <a name="genProtoProp"></a>
 
 ## genProtoProp(target, permissions, opt) ⇒ [<code>Array.&lt;Prop&gt;</code>](#Prop)
-Generates a prop for a target object's prototype.
+Generates a prop for a Target object's prototype. Will attach Target object's permission statuses using the same 'parentIs' language, even though it is not technically a child.
 
 **Returns**: [<code>Array.&lt;Prop&gt;</code>](#Prop) - Array with single entry of '\_\_proto__' key and value.  
 
@@ -871,7 +871,7 @@ Description of a given level of the chain. Transformed Prop Object with location
 
 | Name | Type | Description |
 | --- | --- | --- |
-| [host] | [<code>Host</code>](#Host) | When a non-primitive key has been encountered, a separate chain will be created with that key. Items on that chain will be labeled with a 'host' property to specify which host the path applies to. PropAt Objects lacking a 'host' property imply that the path applies to the initially supplied Host. |
+| [host] | [<code>Host</code>](#Host) | When a non-primitive key has been encountered, a separate chain will be created with that key. Items on that chain will be labeled with a 'host' property to specify which Host the path applies to. PropAt Objects lacking a 'host' property imply that the path applies to the initially supplied Host. |
 | path | [<code>Path</code>](#Path) | Describes the steps taken from the Host in order to reach the Prop's value. |
 | [value] | <code>\*</code> | Value described at the Prop's location (if any). In cases of a previously discovered reference (circular or otherwise), value will be replaced with a ref property (unless opt.showRefValues is true). |
 | [writable] | <code>boolean</code> | 'Writable' property descriptor of the value. |
@@ -914,7 +914,7 @@ Modifies types of children to extract.
 | [stepwise] | <code>boolean</code> |  | Whether or not to yield a PropAt object at every step down the chain. |
 | [includeRefValues] | <code>boolean</code> |  | Whether or not to attach a value to Props with Refs attached. |
 | [gen] | <code>boolean</code> |  | Whether or not to return a generator instead of executing the entire search. |
-| [full] | <code>boolean</code> |  | If true, replaces undefined Options with maximum search settings (All options except for propsCustomizer will be set to true). User supplied options supercede any changes here. |
+| [full] | <code>boolean</code> |  | If true, replaces undefined options with maximum search settings (all options except for propsCustomizer will be set to true). User supplied options supercede any changes here. |
 | [propsCustomizer] | [<code>PropsCustomizer</code>](#PropsCustomizer) |  | Function used for custom extraction of PropEntries from a Target. |
 
 **Example**  

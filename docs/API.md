@@ -12,7 +12,7 @@ Creates an array of deep paths and properties associated with an object. Non-rec
 | host | [<code>Host</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Host) |  | Object to unpack. |
 | [opt] | [<code>Options</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Options) | <code>{}</code> | Execution settings. |
 
-###Examples
+### Examples
 
 **Simple nested object**  
 ```js
