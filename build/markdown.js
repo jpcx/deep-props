@@ -122,7 +122,7 @@ const removeTopNamespace = string => string.replace(
  */
 const addsHomeFooterHorizontal = string => string.replace(
   /^\[Home\]\(index\.html\)\n-*\n/gm,
-  '<hr>\n## [Home](/README.md)'
+  '<hr>\n## [Home](/README.md)\n'
 )
 
 /**
