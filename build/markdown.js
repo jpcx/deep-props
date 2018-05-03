@@ -359,7 +359,7 @@ md.extract.global = turndownService.turndown(
  * @param {Object} md - Object containing MD texts.
  */
 const applyAllRules = md => {
-  const URL = 'https://github.com/jpcx/deep-props/blob/new_modules/'
+  const URL = '/'
   const MODULES_PATH = 'libs/'
   const TOP_NAMESPACE = 'deep-props'
 
