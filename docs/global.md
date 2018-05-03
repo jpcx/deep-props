@@ -8,11 +8,11 @@ Provides a collection of tools for performing operations on deeply nested object
 
 Source:
 
-*   [index.js](index.js), [line 7](index.js#L7)
+*   [index.js](/index.js), [line 7](/index.js#L7)
 
 ### Namespaces
 
-[extract](libs/extract/docs/global.md)
+[extract](/libs/extract/docs/global.md)
 
 ### Type Definitions
 
@@ -22,11 +22,11 @@ Container object used as a target for child property extraction.
 
 ##### Type:
 
-*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](docs/global.md#Custom)
+*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](/docs/global.md#Custom)
 
 Source:
 
-*   [index.js](index.js), [line 38](index.js#L38)
+*   [index.js](/index.js), [line 38](/index.js#L38)
 
 #### Custom
 
@@ -38,7 +38,7 @@ Custom dataset for use as a [Container](#~Container). May be accessed via valid 
 
 Source:
 
-*   [index.js](index.js), [line 15](index.js#L15)
+*   [index.js](/index.js), [line 15](/index.js#L15)
 
 ##### Example
 
@@ -60,11 +60,11 @@ A non-primitive [Container](#~Container) which represents the root of a given pa
 
 ##### Type:
 
-*   [deep-props~Container](docs/global.md#Container)
+*   [deep-props~Container](/docs/global.md#Container)
 
 Source:
 
-*   [index.js](index.js), [line 44](index.js#L44)
+*   [index.js](/index.js), [line 44](/index.js#L44)
 
 #### Key
 
@@ -72,11 +72,11 @@ Key used for accessing a child property within a container. When its value is `'
 
 ##### Type:
 
-*   string | [deep-props~Container](docs/global.md#Container)
+*   string | [deep-props~Container](/docs/global.md#Container)
 
 Source:
 
-*   [index.js](index.js), [line 32](index.js#L32)
+*   [index.js](/index.js), [line 32](/index.js#L32)
 
 #### ResultGenerator
 
@@ -88,16 +88,16 @@ Generator object which yields stepwise operation results.
 
 Source:
 
-*   [index.js](index.js), [line 50](index.js#L50)
+*   [index.js](/index.js), [line 50](/index.js#L50)
 
-<hr>[Home](README.md)
+<hr>[Home](/README.md)
 ------------------
 
 ### Modules
 
-*   [extract](libs/module-extract/docs/global.md)
+*   [extract](/libs/module-extract/docs/global.md)
 
 ### Namespaces
 
-*   [deep-props](docs/global.md)
-*   [extract](libs/extract/docs/global.md)
+*   [deep-props](/docs/global.md)
+*   [extract](/libs/extract/docs/global.md)
