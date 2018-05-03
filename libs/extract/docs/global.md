@@ -10,7 +10,7 @@ Source:
 
 ### Methods
 
-<a name=assignReferencePoints></a>
+<a name="assignReferencePoints"></a>
 #### (static) assignReferencePoints(props, hostopt, pathopt) → \{Array.<[deep-props.extract~PropAt](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#PropAt)>}
 
 Assigns reference points to a list of properties.
@@ -98,7 +98,7 @@ props = [
 
 assignReferencePoints(props, { foo: 'bar' })
 ```
-<a name=genPropsFromDescriptorEntries></a>
+<a name="genPropsFromDescriptorEntries"></a>
 #### (static) genPropsFromDescriptorEntries(descriptorEntries, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Converts list of descriptors to prop Array. Attaches information based on options.
@@ -155,7 +155,7 @@ genPropsFromDescriptorEntries(
   { descriptors: true, permissions: true }
 )
 ```
-<a name=genProtoProp></a>
+<a name="genProtoProp"></a>
 #### (static) genProtoProp(container, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Generates a prop for a target object's prototype.
@@ -199,7 +199,7 @@ genProtoProp(
   { descriptors: true, permissions: true }
 )
 ```
-<a name=getMapProps></a>
+<a name="getMapProps"></a>
 #### (static) getMapProps(container, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Gets a list of properties within a target Map.
@@ -253,7 +253,7 @@ getMapProps(
   { descriptors: true, permissions: true }
 )
 ```
-<a name=getObjectPermissions></a>
+<a name="getObjectPermissions"></a>
 #### (static) getObjectPermissions(container) → \{[deep-props.extract~Permissions](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Permissions)}
 
 Gets the frozen, sealed, and extensible statuses of an object.
@@ -285,7 +285,7 @@ Type
 
 getObjectPermissions({})
 ```
-<a name=getOwnProps></a>
+<a name="getOwnProps"></a>
 #### (static) getOwnProps(container, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Generates a list of non-inherited properties of a target object.
@@ -342,7 +342,7 @@ getOwnProps(
   { descriptors: true, permissions: true }
 )
 ```
-<a name=getProps></a>
+<a name="getProps"></a>
 #### (static) getProps(container, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Returns all inherited properties, own properties, special properties, and object permissions.
@@ -394,7 +394,7 @@ const map = new Map(
 
 getProps(map, { inherited: true, descriptors: true, permissions: true })
 ```
-<a name=getSetProps></a>
+<a name="getSetProps"></a>
 #### (static) getSetProps(container, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Gets a list of properties within a target Set. Uses insertion order as keys.
@@ -445,7 +445,7 @@ getSetProps(
   { descriptors: true, permissions: true }
 )
 ```
-<a name=getSpecialProps></a>
+<a name="getSpecialProps"></a>
 #### (static) getSpecialProps(container, permissions, opt) → \{Array.<[deep-props.extract~Prop](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Prop)>}
 
 Gets any special object properties. If propsCustomizer is supplied, and returns a defined value from target, then getSpecialProps will return this value.
@@ -578,7 +578,7 @@ getSpecialProps(
   { descriptors: true, permissions: true, propsCustomizer }
 )
 ```
-<a name=isPrimitive></a>
+<a name="isPrimitive"></a>
 #### (static) isPrimitive(x) → \{boolean}
 
 Determines if x is a JS primitive. Used to determine if a value should be unpacked.
@@ -613,7 +613,7 @@ isPrimitive('foo')
 
 isPrimitive({})
 ```
-<a name=mergeOptions></a>
+<a name="mergeOptions"></a>
 #### (static) mergeOptions(opt) → \{[deep-props.extract~Options](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md#Options)}
 
 Merges supplied options with defaults.

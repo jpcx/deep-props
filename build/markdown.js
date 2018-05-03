@@ -287,10 +287,10 @@ const labelNameTags = string => string.split(
 
       if (staticMatch !== undefined) {
         opData.looking = false
-        line = '<a name=' + staticMatch + '></a>\n' + line
+        line = '<a name="' + staticMatch + '"></a>\n' + line
       } else if (typeMatch !== undefined) {
         opData.looking = false
-        line = '<a name=' + typeMatch + '></a>\n' + line
+        line = '<a name="' + typeMatch + '"></a>\n' + line
       }
 
       opData.newString = line + opData.newString
