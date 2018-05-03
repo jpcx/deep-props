@@ -7,7 +7,8 @@
 'use strict'
 
 /**
- * Builds the markdown documentation from the JSDoc output using the turndown module. Valid as of JSDoc v3.5.5, turndown v4.0.2, and turndown-plugin-gfm v1.0.1.
+ * Builds the markdown documentation from the JSDoc output using the turndown module.
+ * Valid as of JSDoc v3.5.5, turndown v4.0.2, and turndown-plugin-gfm v1.0.1.
  *
  * @private
  * @see {@link https://www.npmjs.com/package/turndown-plugin-gfm}
@@ -300,7 +301,7 @@ md.extract.global = turndownService.turndown(
  * @param {Object} md - Object containing MD texts.
  */
 const applyAllRules = md => {
-  const URL = 'https://github.com/jpcx/deep-props/blob/master/'
+  const URL = 'https://github.com/jpcx/deep-props/blob/new_modules/'
   const MODULES_PATH = 'libs/'
   const TOP_NAMESPACE = 'deep-props'
 
