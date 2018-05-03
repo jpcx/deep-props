@@ -171,8 +171,7 @@ Object.freeze(data.foo)
 extract(data, { stepwise: true, descriptors: true, permissions: true })
 ```
 <hr>
-[Home](/README.md)
-------------------
+## [Home](/README.md)
 
 ### Modules
 
