@@ -290,13 +290,13 @@ const labelNameTags = string => string.split(
 
       if (namespaceMatch !== undefined) {
         opData.looking = false
-        line = '<a name=' + namespaceMatch + '></a>' + line
+        line = '<a name=~' + namespaceMatch + '></a>' + line
       } else if (staticMatch !== undefined) {
         opData.looking = false
-        line = '<a name=' + staticMatch + '></a>' + line
+        line = '<a name=~' + staticMatch + '></a>' + line
       } else if (typeMatch !== undefined) {
         opData.looking = false
-        line = '<a name=' + typeMatch + '></a>' + line
+        line = '<a name=~' + typeMatch + '></a>' + line
       }
 
       opData.newString = line + opData.newString
