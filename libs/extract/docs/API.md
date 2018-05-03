@@ -176,6 +176,7 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 ```
 
 <hr>
+
 ## [Home](/README.md)
 
 ### Modules
