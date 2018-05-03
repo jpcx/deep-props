@@ -1007,7 +1007,8 @@ Source:
 ```js
 { host: { foo: 'bar' }, path: [ 'baz', 'beh' ] }
 ```
-<hr>[Home](/README.md)
+<hr>
+[Home](/README.md)
 ------------------
 
 ### Modules
