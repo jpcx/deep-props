@@ -2,15 +2,20 @@
 
 [![NPM](https://nodei.co/npm/deep-props.png)](https://nodei.co/npm/deep-props/)
 
-Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
+Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
 
-Endpoints may be previously discovered object references, primitives, or objects whose children are inaccessible due to settings or otherwise.
+More submodules coming soon!
 
-Avoids recursion by using a task queue; very deep objects may be traversed without hitting the stack limit.
+<a name=submodules></a>
+#### Submodules:
+<ul>
+  <li><a href="https://github.com/jpcx/deep-props/blob/master/libs/extract/README.md"><strong>extract</strong></a>
 
-Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropsCustomizer).
-
-Circular references or otherwise duplicate references to objects will be signified using a 'ref' property, rather than a value. See the [return details](#PropAt).
+  <a href = https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
+  <ul>
+    <li>Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
+  </ul>
+</ul>
 
 ## Getting Started
 
@@ -20,9 +25,11 @@ Node.JS version 8.7.0 or above.
 
 ### Installing
 
+Installing all modules:
 ```
 npm install deep-props
 ```
+Submodules may be installed individually. See <a href=#submodules>the module list</a> above.
 
 ### Testing
 
@@ -36,182 +43,30 @@ npm test --prefix /path/to/node_modules/deep-props
 
 ```js
 const props = require('deep-props')
-```
-
-### Usage
-
-**Nested object extraction**
-```js
-const data = { foo: { bar: { baz: 'qux' } } }
-
-// returns { path: [ 'foo', 'bar', 'baz' ], value: 'qux' }
-props(data)
-```
-
-**Unrooting of Object Keys**
-```js
-const data = new Map().set(
-  { foo: 'bar' }, new Map().set(
-    { baz: 'beh' }, new Map().set(
-      { qux: 'quz' }, new Map().set(
-        { quux: 'quuz' }, 'thud'
-      )
-    )
-  )
-)
-
-// returns:
-// [
-//   {
-//     path: [ { foo: 'bar' }, { baz: 'beh' }, { qux: 'quz' }, { quux: 'quuz' } ],
-//     value: 'thud'
-//   },
-//   { host: { quux: 'quuz' }, path: ['quux'], value: 'quuz' },
-//   { host: { qux: 'quz' }, path: ['qux'], value: 'quz' },
-//   { host: { baz: 'beh' }, path: ['baz'], value: 'beh' },
-//   { host: { foo: 'bar' }, path: ['foo'], value: 'bar' }
-// ]
-
-props(data)
-```
-
-**Extraction from complicated nests**
-```js
-const data = {
-  foo: [
-    new Map().set(
-      'bar', new Set([
-        {
-          baz: {
-            qux: {
-              quz: [
-                'quux',
-                'quuz'
-              ]
-            }
-          }
-        },
-        {
-          lorem: {
-            ipsum: 'dolor'
-          }
-        }
-      ])
-    )
-  ]
-}
-
-// returns:
-// [
-//   {
-//     path: [ 'foo', '0', 'bar', '0', 'baz', 'qux', 'quz', '0' ],
-//     value: 'quux' },
-//   { path: [ 'foo', '0', 'bar', '0', 'baz', 'qux', 'quz', '1' ],
-//     value: 'quuz' },
-//   { path: [ 'foo', '0', 'bar', '1', 'lorem', 'ipsum' ],
-//     value: 'dolor'
-//   }
-// ]
-
-props(data)
-```
-
-**Verbose Options**
-```js
-const data = { foo: { bar: 'baz' } }
-Object.freeze(data.foo)
-
-// returns:
-// [
-//   {
-//     path: ['foo'],
-//     value: { bar: 'baz' },
-//     writable: true,
-//     enumerable: true,
-//     configurable: true,
-//     parentIsFrozen: false,
-//     parentIsSealed: false,
-//     parentIsExtensible: true
-//   },
-//   {
-//     path: [ 'foo', 'bar' ],
-//     value: 'baz',
-//     writable: false,
-//     enumerable: true,
-//     configurable: false,
-//     parentIsFrozen: true,
-//     parentIsSealed: true,
-//     parentIsExtensible: false
-//   }
-// ]
-
-props(data, { stepwise: true, descriptors: true, permissions: true })
+const extract = props.extract
 ```
 
 ## Documentation
 
-### deepProps ⇒ [<code>Array.&lt;PropAt&gt;</code>](#PropAt) \| [<code>Search</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Search)
+##### Module README files:
+* [extract](https://github.com/jpcx/deep-props/blob/master/libs/extract/README.md)
 
-**Returns**: [<code>Array.&lt;PropAt&gt;</code>](#PropAt) \| [<code>Search</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Search) - Array of paths and values or references. Returns Search generator if opt.gen is true.  
+##### API Usage Documentation files:
+* [extract](https://github.com/jpcx/deep-props/blob/master/libs/extract/docs/API.md)
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| host | [<code>Host</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Host) |  | Object to unpack. |
-| [opt] | [<code>Options</code>](#Options) | <code>{}</code> | Execution settings. |
+##### Module-Specific Type Definitions and Functions:
+* [extract](https://github.com/jpcx/deep-props/blob/master/libs/extract/docs/global.md)
 
-<a name="Options"></a>
-
-### Options : <code>Object</code>
-*See: [<code>Options</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Options)*
-
-Execution-wide settings supplied to the module.
-Modifies types of data attached to results.
-Modifies types of children to extract.
-
-**Properties**
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| [inherited] | <code>boolean</code> |  | Whether or not to search for inherited properties. Attaches these keys behind a '\_\_proto__' key. |
-| [own] | <code>boolean</code> | <code>true</code> | Whether or not to search for own properties. Defaults to true. |
-| [nonEnumerable] | <code>boolean</code> |  | Whether or not to search for and return non-enumerable properties. |
-| [permissions] | <code>boolean</code> |  | Whether or not to attach Permissions to results. |
-| [descriptors] | <code>boolean</code> |  | Whether or not to attach property descriptors other than 'value' to results. |
-| [stepwise] | <code>boolean</code> |  | Whether or not to yield a PropAt object at every step down the chain. |
-| [includeRefValues] | <code>boolean</code> |  | Whether or not to attach a value to Props with Refs attached. |
-| [gen] | <code>boolean</code> |  | Whether or not to return a generator instead of executing the entire search. |
-| [full] | <code>boolean</code> |  | If true, replaces undefined options with maximum search settings (all options except for propsCustomizer will be set to true). User supplied options supercede any changes here. |
-| [propsCustomizer] | [<code>PropsCustomizer</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropsCustomizer) |  | Function used for custom extraction of PropEntries from a Target. |
-
-<a name="PropAt"></a>
-
-### PropAt : <code>Object</code>
-*See: [<code>PropAt</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropAt)*
-
-Description of a given level of the chain. Transformed Prop Object with location attched.
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| [host] | [<code>Host</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Host) | When a non-primitive key has been encountered, a separate chain will be created with that key. Items on that chain will be labeled with a 'host' property to specify which Host the path applies to. PropAt Objects lacking a 'host' property imply that the path applies to the initially supplied Host. |
-| path | [<code>Path</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Path) | Describes the steps taken from the Host in order to reach the Prop's value. |
-| [value] | <code>\*</code> | Value described at the Prop's location (if any). In cases of a previously discovered reference (circular or otherwise), value will be replaced with a ref property (unless opt.showRefValues is true). |
-| [writable] | <code>boolean</code> | 'Writable' property descriptor of the value. |
-| [enumerable] | <code>boolean</code> | 'Enumerable' property descriptor of the value. |
-| [configurable] | <code>boolean</code> | 'Configurable' property descriptor of the value. |
-| [parentIsFrozen] | <code>boolean</code> | Frozen status of the parent object. |
-| [parentIsSealed] | <code>boolean</code> | Sealed status of the parent object. |
-| [parentIsExtensible] | <code>boolean</code> | Extensible status of the parent object. |
-| [ref] | [<code>Ref</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Ref) | If the value strictly equals a previously discovered Target, the Host and Path of that Target will be provided. |
-
-### See
-* [API Docs](https://github.com/jpcx/deep-props/blob/master/docs/API.md)
-* [Global Docs](https://github.com/jpcx/deep-props/blob/master/docs/global.md)
+##### Global Namespace Type Definitions:
+* [deep-props](https://github.com/jpcx/deep-props/blob/master/docs/global.md)
 
 ## Versioning
 
 Versioned using [SemVer](http://semver.org/). For available versions, see the [tags on this repository](https://github.com/jpcx/deep-props/tags).
+
+## Contribution
+
+Please raise an issue if you find any. Suggestions are welcome!
 
 ## Author
 

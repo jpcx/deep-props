@@ -8,11 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "prepare": "npm run-script check-linting; npm test",
-    "build-docs": "jsdoc index.js --readme README.md",
-    "check-linting": "eslint index.js; eslint test.js",
-    "print-markdown": "jsdoc2md index.js",
-    "minify": "uglifyjs --source-map filename=\"index.min.js.map\" --output index.min.js index.js -c -m --toplevel --comments"
+    "prepare": "npm run-script build-docs; npm test",
+    "build-docs": "jsdoc . -c build/.jsdoc.conf.json --readme README.md -d build/jsdoc; node build/markdown.js; rm -r build/jsdoc"
   },
   "keywords": [
     "unpack",
@@ -39,9 +36,8 @@
     "eslint-plugin-jsdoc": "^3.5.0",
     "eslint-plugin-node": "^6.0.1",
     "jsdoc": "^3.5.5",
-    "jsdoc-to-markdown": "^4.0.1",
     "standard": "^11.0.1",
-    "uglify-es": "^3.3.9"
-  },
-  "dependencies": {}
+    "turndown": "^4.0.2",
+    "turndown-plugin-gfm": "^1.0.1"
+  }
 }
