@@ -1038,8 +1038,8 @@ Source:
 { host: { foo: 'bar' }, path: [ 'baz', 'beh' ] }
 ```
 
-<hr>[Home](index.html)
-----------------------
+<hr>
+## [Home](/README.md)
 ### Modules
 
 *   [extract](/libs/extract/docs/API.md)

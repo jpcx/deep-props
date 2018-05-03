@@ -92,8 +92,8 @@ Source:
 
 *   [index.js](/index.js), [line 50](/index.js#L50)
 
-<hr>[Home](index.html)
-----------------------
+<hr>
+## [Home](/README.md)
 ### Modules
 
 *   [extract](/libs/extract/docs/API.md)
