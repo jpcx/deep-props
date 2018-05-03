@@ -91,7 +91,7 @@ Source:
 *   [index.js](/index.js), [line 50](/index.js#L50)
 
 <hr>
-## [Home](/README.md)
+<h2><a href="/README.md">Home</a></h2>
 
 ### Modules
 

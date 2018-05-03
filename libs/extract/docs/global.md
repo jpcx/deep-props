@@ -1008,7 +1008,7 @@ Source:
 { host: { foo: 'bar' }, path: [ 'baz', 'beh' ] }
 ```
 <hr>
-## [Home](/README.md)
+<h2><a href="/README.md">Home</a></h2>
 
 ### Modules
 

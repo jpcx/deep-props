@@ -128,7 +128,7 @@ const formatSourceCodeURLs = (string, URL) => string.split(
  */
 const replaceIndexFooter = (string, URL) => string.replace(
   /^\[Home\]\(index\.html\)$\n^------------------$\n^$/gm,
-  '<hr>\n## [Home](' + URL + 'README.md)\n'
+  '<hr>\n<h2><a href="' + URL + 'README.md">Home</a></h2>\n'
 )
 
 /**
