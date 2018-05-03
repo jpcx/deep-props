@@ -7,8 +7,8 @@ Creates an array of deep paths and properties associated with an object. Non-rec
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](/docs/global.md#Host) |  |  | Object to unpack. |
-| `opt` | [deep-props.extract~Options](/libs/extract/docs/global.md#Options) | \<optional> | {} | Execution settings. |
+| `host` | [deep-props~Host](/docs/global.md#~Host) |  |  | Object to unpack. |
+| `opt` | [deep-props.extract~Options](/libs/extract/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
@@ -20,7 +20,7 @@ Array of paths and values or references. Returns Search generator if opt.gen is 
 
 Type
 
-Array.<[deep-props.extract~PropAt](/libs/extract/docs/global.md#PropAt)> | [deep-props~ResultGenerator](/docs/global.md#ResultGenerator)
+Array.<[deep-props.extract~PropAt](/libs/extract/docs/global.md#~PropAt)> | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -41,6 +41,7 @@ const data = {
 
 extract(data)
 ```
+
 ```js
 // Multi-nested object
 
@@ -70,6 +71,7 @@ const data = {
 
 extract(data)
 ```
+
 ```js
 // Unrooting of Object Keys
 
@@ -97,6 +99,7 @@ const data = new Map().set(
 
 extract(data)
 ```
+
 ```js
 // Extraction from complicated nests
 
@@ -138,6 +141,7 @@ const data = {
 
 extract(data)
 ```
+
 ```js
 // Verbose Options
 
@@ -170,12 +174,12 @@ Object.freeze(data.foo)
 
 extract(data, { stepwise: true, descriptors: true, permissions: true })
 ```
-<hr>
-<h2><a href="/README.md">Home</a></h2>
 
+<hr>[Home](index.html)
+----------------------
 ### Modules
 
-*   [extract](/libs/module-extract/docs/global.md)
+*   [extract](/libs/extract/docs/API.md)
 
 ### Namespaces
 

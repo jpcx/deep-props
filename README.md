@@ -11,7 +11,7 @@ More submodules coming soon!
 <ul>
   <li><a href="https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/README.md"><strong>extract</strong></a>
 
-  <a href = https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
+  <a href=https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
   <ul>
     <li>Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
   </ul>
