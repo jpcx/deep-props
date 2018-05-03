@@ -278,9 +278,6 @@ const labelNameTags = string => string.split(
       }
       opData.newString = line + opData.newString
     } else {
-      const namespaceMatch = line.split(
-        /^Namespace: ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)$/gm
-      )[1]
       const staticMatch = line.split(
         /^#### \(static\) ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)\(/gm
       )[1]
@@ -288,15 +285,12 @@ const labelNameTags = string => string.split(
         /^#### ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)$\n\n/gm
       )[1]
 
-      if (namespaceMatch !== undefined) {
+      if (staticMatch !== undefined) {
         opData.looking = false
-        line = '<a name=%7E' + namespaceMatch + '></a>' + line
-      } else if (staticMatch !== undefined) {
-        opData.looking = false
-        line = '<a name=%7E' + staticMatch + '></a>' + line
+        line = '<a name=%7E' + staticMatch + '></a>\n' + line
       } else if (typeMatch !== undefined) {
         opData.looking = false
-        line = '<a name=%7E' + typeMatch + '></a>' + line
+        line = '<a name=%7E' + typeMatch + '></a>\n' + line
       }
 
       opData.newString = line + opData.newString

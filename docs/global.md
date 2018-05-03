@@ -1,4 +1,4 @@
-<a name=%7Edeep-props></a>Namespace: deep-props
+Namespace: deep-props
 =====================
 
 deep-props
