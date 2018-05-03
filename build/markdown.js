@@ -247,13 +247,65 @@ const fixTableLineBreaks = string => string.replace(
  * Escapes asterix bullets.
  *
  * @private
- * @param   {string} string - Search String.
+ * @param   {string} string - Search string.
  * @returns {string} Formatted string.
  */
 const fixAsterixBullets = string => string.replace(
   /\* {3}\*/g,
   '*   \\*'
 )
+
+/**
+ * Creates HTML name tags for methods and typedefs.
+ *
+ * @private
+ * @param   {string} string - Search string.
+ * @returns {string} Formatted string.
+ */
+const labelNameTags = string => string.split(
+  /(\n)/gm
+).reduce(
+  (flipped, line) => {
+    flipped.unshift(line)
+    return flipped
+  },
+  []
+).reduce(
+  (opData, line) => {
+    if (!opData.looking) {
+      if (line.match(/^Source:$/gm) !== null) {
+        opData.looking = true
+      }
+      opData.newString = line + opData.newString
+    } else {
+      const namespaceMatch = line.split(
+        /^Namespace: ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)$/gm
+      )[1]
+      const staticMatch = line.split(
+        /^#### \(static\) ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)\(/gm
+      )[1]
+      const typeMatch = line.split(
+        /^#### ([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)$\n\n/gm
+      )[1]
+
+      if (namespaceMatch !== undefined) {
+        opData.looking = false
+        line = '<a name=' + namespaceMatch + '></a>' + line
+      } else if (staticMatch !== undefined) {
+        opData.looking = false
+        line = '<a name=' + staticMatch + '></a>' + line
+      } else if (typeMatch !== undefined) {
+        opData.looking = false
+        line = '<a name=' + typeMatch + '></a>' + line
+      }
+
+      opData.newString = line + opData.newString
+    }
+
+    return opData
+  },
+  { looking: false, newString: '' }
+).newString
 
 const TurndownService = require('turndown')
 const turndownPluginGfm = require('turndown-plugin-gfm')
@@ -324,6 +376,7 @@ const applyAllRules = md => {
         object[key] = fixOptionalTags(object[key])
         object[key] = fixTableLineBreaks(object[key])
         object[key] = fixAsterixBullets(object[key])
+        object[key] = labelNameTags(object[key])
       } else {
         recurse(object[key])
       }
