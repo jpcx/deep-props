@@ -22,7 +22,7 @@ Container object used as a target for child property extraction.
 
 ##### Type:
 
-*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#~Custom)
+*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#Custom)
 
 Source:
 
@@ -60,7 +60,7 @@ A non-primitive [Container](#~Container) which represents the root of a given pa
 
 ##### Type:
 
-*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#~Container)
+*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#Container)
 
 Source:
 
@@ -72,7 +72,7 @@ Key used for accessing a child property within a container. When its value is `'
 
 ##### Type:
 
-*   string | [deep-props~Container](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#~Container)
+*   string | [deep-props~Container](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#Container)
 
 Source:
 

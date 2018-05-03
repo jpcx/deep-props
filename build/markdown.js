@@ -287,10 +287,10 @@ const labelNameTags = string => string.split(
 
       if (staticMatch !== undefined) {
         opData.looking = false
-        line = '<a name=%7E' + staticMatch + '></a>\n' + line
+        line = '<a name=' + staticMatch + '></a>\n' + line
       } else if (typeMatch !== undefined) {
         opData.looking = false
-        line = '<a name=%7E' + typeMatch + '></a>\n' + line
+        line = '<a name=' + typeMatch + '></a>\n' + line
       }
 
       opData.newString = line + opData.newString
@@ -300,6 +300,18 @@ const labelNameTags = string => string.split(
   },
   { looking: false, newString: '' }
 ).newString
+
+/**
+ * Removes tildes from href tags.
+ *
+ * @private
+ * @param {string} string - Search string.
+ * @returns {string} Formatted string.
+ */
+const removeTildeLinks = string => string.replace(
+  /\.md#~/gm,
+  '.md#'
+)
 
 const TurndownService = require('turndown')
 const turndownPluginGfm = require('turndown-plugin-gfm')
@@ -371,6 +383,7 @@ const applyAllRules = md => {
         object[key] = fixTableLineBreaks(object[key])
         object[key] = fixAsterixBullets(object[key])
         object[key] = labelNameTags(object[key])
+        object[key] = removeTildeLinks(object[key])
       } else {
         recurse(object[key])
       }
