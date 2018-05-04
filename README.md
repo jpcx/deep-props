@@ -6,10 +6,10 @@ Provides a collection of tools for performing operations on deeply nested object
 
 More submodules coming soon!
 
-<a name=submodules></a>
+<a name="submodules"></a>
 #### Submodules:
 <ul>
-  <li><a href="https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/README.md"><strong>extract</strong></a>
+  <li><a href=/libs/extract/README.md><strong>extract</strong></a>
 
   <a href=https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
   <ul>
@@ -49,16 +49,16 @@ const extract = props.extract
 ## Documentation
 
 ##### Module README files:
-* [extract](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/README.md)
+* [extract](/libs/extract/README.md)
 
 ##### API Usage Documentation files:
-* [extract](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/API.md)
+* [extract](/libs/extract/docs/API.md)
 
 ##### Module-Specific Type Definitions and Functions:
-* [extract](https://github.com/jpcx/deep-props/blob/new_modules/libs/extract/docs/global.md)
+* [extract](/libs/extract/docs/global.md)
 
 ##### Global Namespace Type Definitions:
-* [deep-props](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md)
+* [deep-props](/docs/global.md)
 
 ## Versioning
 
@@ -74,4 +74,4 @@ Please raise an issue if you find any. Suggestions are welcome!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/new_modules/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
