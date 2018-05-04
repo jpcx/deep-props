@@ -8,14 +8,10 @@ More submodules coming soon!
 
 <a name="submodules"></a>
 #### Submodules:
-<ul>
-  <li><a href=/libs/extract/README.md><strong>extract</strong></a>
++ <a href=/libs/extract/README.md><strong>extract</strong></a>
 
   <a href=https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
-  <ul>
-    <li>Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
-  </ul>
-</ul>
+  + Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
 
 ## Getting Started
 
