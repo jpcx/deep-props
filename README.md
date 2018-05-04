@@ -22,9 +22,11 @@ Node.JS version 8.7.0 or above.
 ### Installing
 
 Installing all modules:
+
 ```bash
 npm install deep-props
 ```
+
 Submodules may be installed individually. See [the module list](#submodules) above.
 
 ### Testing
@@ -34,6 +36,7 @@ The following command will test the package for errors. It prints a large select
 ```bash
 npm test --prefix /path/to/node_modules/deep-props
 ```
+
 <a name="deployment">
 ### Deployment
 
