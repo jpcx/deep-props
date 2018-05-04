@@ -37,7 +37,7 @@ The following command will test the package for errors. It prints a large select
 npm test --prefix /path/to/node_modules/deep-props
 ```
 
-<a name="deployment">
+<a name="deployment"></a>
 ### Deployment
 
 ```js
