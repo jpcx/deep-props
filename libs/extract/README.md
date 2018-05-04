@@ -8,7 +8,7 @@ Endpoints may be previously discovered object references, primitives, or objects
 
 Avoids recursion by using a task queue; very deep objects may be traversed without hitting the stack limit.
 
-Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](https://github.com/jpcx/deep-props/blob/new_modules/docs/global.md#PropsCustomizer).
+Any unsupported data structure may be accessed by supplying a customizer function. See [the global docs](/libs/extract/docs/global.md#~PropsCustomizer).
 
 Circular references or otherwise duplicate references to objects will be signified using a 'ref' property, rather than a value. See the [return details](#~PropAt).
 
