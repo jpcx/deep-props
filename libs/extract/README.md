@@ -1,4 +1,4 @@
-# deep-props
+# [deep-props](/README.md).extract
 
 [![NPM](https://nodei.co/npm/deep-props.extract.png)](https://nodei.co/npm/deep-props.extract/)
 
