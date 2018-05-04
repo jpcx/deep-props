@@ -14,28 +14,30 @@ Circular references or otherwise duplicate references to objects will be signifi
 
 ## Getting Started
 
+The following installation, testing, and deployment instructions assume that deep-props.extract will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](/README.md). Functionality of the module remains the same in both cases.
+
 ### Prerequisites
 
 Node.JS version 8.7.0 or above.
 
 ### Installing
 
-```
-npm install deep-props
+```bash
+npm install deep-props.extract
 ```
 
 ### Testing
 
 The following command will test the package for errors. It prints a large selection of examples to the console; scroll through its output if you want to learn more about the utility.
 
-```
-npm test --prefix /path/to/node_modules/deep-props
+```bash
+npm test --prefix /path/to/node_modules/deep-props.extract
 ```
 
 ### Deployment
 
 ```js
-const extract = require('deep-props').extract
+const extract = require('deep-props.extract')
 ```
 
 ### Usage

@@ -2,15 +2,15 @@
 
 [![NPM](https://nodei.co/npm/deep-props.png)](https://nodei.co/npm/deep-props/)
 
-Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
+__Migration notice: users of deep-props ≤ v0.0.8 must replace module calls with deep-props.extract. See the [deployment instructions](#deployment) below. All other functionality is the same.__
 
-More submodules coming soon!
+Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
 
 <a name="submodules"></a>
 #### Submodules:
-+ <a href=/libs/extract/README.md><strong>extract</strong></a>
++ __[extract](/libs/extract/README.md)__
 
-  <a href=https://nodei.co/npm/deep-props.extract/ alt='NPM'><img src="https://nodei.co/npm/deep-props.extract.png?mini=true"></a>
+  [![NPM](https://nodei.co/npm/deep-props.extract.png?mini=true)](https://nodei.co/npm/deep-props.extract/)
   + Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
 
 ## Getting Started
@@ -22,19 +22,19 @@ Node.JS version 8.7.0 or above.
 ### Installing
 
 Installing all modules:
-```
+```bash
 npm install deep-props
 ```
-Submodules may be installed individually. See <a href=#submodules>the module list</a> above.
+Submodules may be installed individually. See [the module list](#submodules) above.
 
 ### Testing
 
 The following command will test the package for errors. It prints a large selection of examples to the console; scroll through its output if you want to learn more about the utility.
 
-```
+```bash
 npm test --prefix /path/to/node_modules/deep-props
 ```
-
+<a name="deployment">
 ### Deployment
 
 ```js
@@ -45,16 +45,16 @@ const extract = props.extract
 ## Documentation
 
 ##### Module README files:
-* [extract](/libs/extract/README.md)
++ [extract](/libs/extract/README.md)
 
 ##### API Usage Documentation files:
-* [extract](/libs/extract/docs/API.md)
++ [extract](/libs/extract/docs/API.md)
 
 ##### Module-Specific Type Definitions and Functions:
-* [extract](/libs/extract/docs/global.md)
++ [extract](/libs/extract/docs/global.md)
 
 ##### Global Namespace Type Definitions:
-* [deep-props](/docs/global.md)
++ [deep-props](/docs/global.md)
 
 ## Versioning
 
@@ -66,7 +66,7 @@ Please raise an issue if you find any. Suggestions are welcome!
 
 ## Author
 
-* **Justin Collier** - [jpcx](https://github.com/jpcx)
++ **Justin Collier** - [jpcx](https://github.com/jpcx)
 
 ## License
 
