@@ -159,7 +159,7 @@ Creates an array of deep paths and properties associated with an object. Non-rec
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
 | `host` | [deep-props~Host](/docs/global.md#~Host) |  |  | Object to unpack. |
-| `opt` | [deep-props.extract~Options](/libs/extract/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+| `opt` | [deep-props.extract~Options](#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
@@ -171,7 +171,7 @@ Array of paths and values or references. Returns Search generator if opt.gen is 
 
 Type
 
-Array.<[deep-props.extract~PropAt](/libs/extract/docs/global.md#~PropAt)> | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
+Array.<[deep-props.extract~PropAt](#~PropAt)> | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
 
 <a name="~Options"></a>
 #### Options
