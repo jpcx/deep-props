@@ -1,5 +1,5 @@
-[deep-props](/docs/global.md).extract
-==================
+# [deep-props](/docs/global.md).extract
+
 Source:
 
 *   [libs/extract/index.js](/libs/extract/index.js), [line 7](/libs/extract/index.js#L7)

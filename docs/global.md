@@ -1,5 +1,5 @@
-deep-props
-==================
+# deep-props
+
 Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
 
 Source:

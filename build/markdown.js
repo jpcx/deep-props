@@ -110,7 +110,7 @@ const fixAsterixBullets = string => string.replace(
  */
 const removeTopNamespace = string => string.replace(
   /^Namespace: [\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*\n=*\n\n([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)\n-*\n$/gm,
-  '$1\n=================='
+  '# $1\n'
 )
 
 /**
