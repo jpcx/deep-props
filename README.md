@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/deep-props.png)](https://nodei.co/npm/deep-props/)
 
-__Migration notice: users of deep-props ≤ v0.0.8 must replace module calls with deep-props.extract. See the [deployment instructions](#deployment) below or install the [deep-props.extract](/libs/extract/README.md) standalone package. All other functionality is the same.__
+__Migration notice: users of deep-props <= v0.0.8 must replace module calls with deep-props.extract. See the [deployment instructions](#deployment) below or install the [deep-props.extract](/libs/extract/README.md) standalone package. All other functionality is the same.__
 
 Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
 
