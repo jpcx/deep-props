@@ -12,6 +12,10 @@ Provides a collection of tools for performing operations on deeply nested object
 
   [![NPM](https://nodei.co/npm/deep-props.extract.png?mini=true)](https://nodei.co/npm/deep-props.extract/)
   + Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
++ __[get](/libs/get/README.md)__
+
+  [![NPM](https://nodei.co/npm/deep-props.get.png?mini=true)](https://nodei.co/npm/deep-props.get/)
+  + Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
 
 ## Getting Started
 
@@ -43,18 +47,22 @@ npm test --prefix /path/to/node_modules/deep-props
 ```js
 const props = require('deep-props')
 const extract = props.extract
+const get = props.get
 ```
 
 ## Documentation
 
 ##### Module README files:
 + [extract](/libs/extract/README.md)
++ [get](/libs/get/README.md)
 
 ##### API Usage Documentation files:
 + [extract](/libs/extract/docs/API.md)
++ [get](/libs/get/docs/API.md)
 
 ##### Module-Specific Type Definitions and Functions:
 + [extract](/libs/extract/docs/global.md)
++ [get](/libs/get/docs/global.md)
 
 ##### Global Namespace Type Definitions:
 + [deep-props](/docs/global.md)

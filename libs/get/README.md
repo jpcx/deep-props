@@ -96,7 +96,7 @@ get(data, ['foo', 0, 'bar', wmKey, 'baz', 0, 'qux'])
 
 <a name="customizer_example"></a>
 
-**Usage of a custom extraction function (see [<code>Options</code>](https://github.com/jpcx/deepget/blob/master/docs/global.md#Options) and [<code>Customizer</code>](https://github.com/jpcx/deepget/blob/master/docs/global.md#Customizer))**
+**Usage of a custom extraction function (see [<code>Options</code>](/libs/get/docs/global.md#~Options) and [<code>GetCustomizer</code>](/libs/get/docs/global.md#~GetCustomizer))**
 ```js
 // Creation of a sample custom data structure which uses a 'retrieve' method for data access.
 class NonNativeDataStructure {
