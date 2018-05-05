@@ -54,5 +54,6 @@
  */
 
 module.exports = {
-  extract: require('./libs/extract')
+  extract: require('./libs/extract'),
+  get: require('./libs/get')
 }

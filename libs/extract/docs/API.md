@@ -182,8 +182,10 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 ### Modules
 
 *   [extract](/libs/extract/docs/API.md)
+*   [get](/libs/get/docs/API.md)
 
 ### Namespaces
 
 *   [deep-props](/docs/global.md)
 *   [extract](/libs/extract/docs/global.md)
+*   [get](/libs/get/docs/global.md)
