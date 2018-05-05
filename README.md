@@ -73,7 +73,7 @@ Versioned using [SemVer](http://semver.org/). For available versions, see the [C
 
 ## Contribution
 
-Please raise an issue if you find any. Suggestions are welcome!
+Please raise an issue if you find any. Pull requests are welcome!
 
 ## Author
 

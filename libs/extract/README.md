@@ -231,6 +231,10 @@ Description of a given level of the chain. Transformed Prop Object with location
 
 Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/libs/extract/CHANGELOG.md).
 
+## Contribution
+
+Please raise an issue if you find any. Pull requests are welcome!
+
 ## Author
 
 * **Justin Collier** - [jpcx](https://github.com/jpcx)
