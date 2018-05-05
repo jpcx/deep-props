@@ -152,7 +152,7 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 
 ## Documentation
 
-#### See:
+### See:
 * [API Docs](/libs/extract/docs/API.md)
 * [Global Docs](/libs/extract/docs/global.md)
 
