@@ -21,7 +21,7 @@ __Main module functionality has been moved to deep-props.extract in order to all
 
 __Majority of module code and documentation done.__
 
-| [Compare Changes](https://github.com/jpcx/deep-props/compare/282988650ee535bbc0655a331ce74b82fc3e827a...0.0.8) | [View Commit](https://github.com/jpcx/deep-props/commit/282988650ee535bbc0655a331ce74b82fc3e827a) | [View Tree](https://github.com/jpcx/deep-props/tree/282988650ee535bbc0655a331ce74b82fc3e827a) | [View README](https://github.com/jpcx/deep-props/tree/282988650ee535bbc0655a331ce74b82fc3e827a/README.md) |
+| [Compare Changes](https://github.com/jpcx/deep-props/compare/282988650ee535bbc0655a331ce74b82fc3e827a...0.0.8) | [View Commit](https://github.com/jpcx/deep-props/commit/8af3d107ee4bf5b2f8abacc304f3993a35f4490c) | [View Tree](https://github.com/jpcx/deep-props/tree/8af3d107ee4bf5b2f8abacc304f3993a35f4490c) | [View README](https://github.com/jpcx/deep-props/tree/8af3d107ee4bf5b2f8abacc304f3993a35f4490c/README.md) |
 | --- | --- | --- | --- |
 
 | [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.0.8.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.0.8.tar.gz) |
