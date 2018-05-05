@@ -302,6 +302,8 @@ writeMarkdown(
   {
     'deep-props.html': '/docs/global.md',
     'module-extract.html': '/libs/extract/docs/API.md',
-    'deep-props.extract.html': '/libs/extract/docs/global.md'
+    'deep-props.extract.html': '/libs/extract/docs/global.md',
+    'module-get.html': '/libs/get/docs/API.md',
+    'deep-props.get.html': '/libs/get/docs/global.md'
   }
 )

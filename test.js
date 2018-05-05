@@ -25,13 +25,16 @@ const ANSI_BOLD = '\x1b[1m'
 const master = require('./')
 
 const extractTests = require('./libs/extract/test.js')
+const getTests = require('./libs/get/test.js')
 
 const extractResults = extractTests.run(master.extract)
+const getResults = getTests.run(master.get)
 
 let totalTestsAttempt = 0
 let numFailed = 0
 
 totalTestsAttempt += extractResults.totalTestsAttempt
+totalTestsAttempt += getResults.totalTestsAttempt
 
 if (extractResults.numFailed > 0) {
   numFailed += extractResults.numFailed
@@ -46,6 +49,23 @@ if (extractResults.numFailed > 0) {
     ANSI_BOLD + ANSI_RED + 'Extract module test failure!\n' + ANSI_RESET
   )
   for (let e of extractResults.errors) {
+    dirDeep(e)
+  }
+}
+
+if (getResults.numFailed > 0) {
+  numFailed += getResults.numFailed
+
+  console.log(
+    `\n========================================${
+      '========================================'
+    }\n`
+  )
+
+  console.log(
+    ANSI_BOLD + ANSI_RED + 'Get module test failure!\n' + ANSI_RESET
+  )
+  for (let e of getResults.errors) {
     dirDeep(e)
   }
 }

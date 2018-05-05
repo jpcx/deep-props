@@ -1,0 +1,45 @@
+{
+  "name": "deep-props.get",
+  "version": "0.1.0",
+  "description": "Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.",
+  "engines": {
+    "node": ">=8.7.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js standalone",
+    "prepare": "npm test"
+  },
+  "keywords": [
+    "get",
+    "data",
+    "collection",
+    "nested",
+    "property",
+    "object",
+    "array",
+    "map",
+    "weakmap",
+    "json",
+    "bracket",
+    "dot",
+    "notation"
+  ],
+  "author": "Justin Collier",
+  "repository": "github:jpcx/deep-props",
+  "bugs": {
+    "url": "https://github.com/jpcx/deep-props/issues",
+    "email": "jpcxme@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jsdoc": "^3.5.0",
+    "eslint-plugin-node": "^6.0.1",
+    "jsdoc": "^3.5.5",
+    "standard": "^11.0.1",
+    "turndown": "^4.0.2",
+    "turndown-plugin-gfm": "^1.0.1"
+  }
+}
