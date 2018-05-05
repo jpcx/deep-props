@@ -1,21 +1,32 @@
-# Module
+Module: extract
+===============
 
-<a name="module_deepProps"></a>
-
-## deepProps ⇒ [<code>Array.&lt;PropAt&gt;</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropAt) \| [<code>Search</code>](#Search)
 Creates an array of deep paths and properties associated with an object. Non-recursively iterates through unpacked children until an endpoint is reached. Optionally traverses prototypes and non-enumerable properties. Endpoints may be previously discovered object references, primitives, or objects without children.
 
-**Returns**: [<code>Array.&lt;PropAt&gt;</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#PropAt) \| [<code>Search</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Search) - Array of paths and values or references. Returns Search generator if opt.gen is true.  
+##### Parameters:
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| host | [<code>Host</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Host) |  | Object to unpack. |
-| [opt] | [<code>Options</code>](https://github.com/jpcx/deep-props/blob/master/docs/global.md#Options) | <code>{}</code> | Execution settings. |
+| Name | Type | Attributes | Default | Description |
+| --- | --- | --- | --- | --- |
+| `host` | [deep-props~Host](/docs/global.md#~Host) |  |  | Object to unpack. |
+| `opt` | [deep-props.extract~Options](/libs/extract/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
-### Examples
+Source:
 
-**Simple nested object**  
+*   [libs/extract/index.js](/libs/extract/index.js), [line 919](/libs/extract/index.js#L919)
+
+##### Returns:
+
+Array of paths and values or references. Returns Search generator if opt.gen is true.
+
+Type
+
+Array.<[deep-props.extract~PropAt](/libs/extract/docs/global.md#~PropAt)> | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
+
+##### Examples
+
 ```js
+// Simple nested object
+
 const data = {
   foo: {
     bar: {
@@ -28,10 +39,12 @@ const data = {
 
 // returns [{ path: [ 'foo', 'bar', 'baz', 'beh' ], val: 'qux' }]
 
-deepProps(data)
+extract(data)
 ```
-**Multi-nested object**  
+
 ```js
+// Multi-nested object
+
 const data = {
   foo: {
     beh: {
@@ -56,10 +69,12 @@ const data = {
 //   { path: [ 'baz', 'quz', 'dolor' ], val: 'vita' }
 // ]
 
-deepProps(data)
+extract(data)
 ```
-**Unrooting of Object Keys**  
+
 ```js
+// Unrooting of Object Keys
+
 const data = new Map().set(
   { foo: 'bar' }, new Map().set(
     { baz: 'beh' }, new Map().set(
@@ -82,11 +97,12 @@ const data = new Map().set(
 //   { host: { foo: 'bar' }, path: ['foo'], value: 'bar' }
 // ]
 
-props(data)
+extract(data)
 ```
 
-**Extraction from complicated nests**  
 ```js
+// Extraction from complicated nests
+
 const data = {
   foo: [
     new Map().set(
@@ -123,10 +139,12 @@ const data = {
 //   }
 // ]
 
-props(data)
+extract(data)
 ```
-**Verbose Options**  
+
 ```js
+// Verbose Options
+
 const data = { foo: { bar: 'baz' } }
 Object.freeze(data.foo)
 
@@ -154,5 +172,18 @@ Object.freeze(data.foo)
 //   }
 // ]
 
-props(data, { stepwise: true, descriptors: true, permissions: true })
+extract(data, { stepwise: true, descriptors: true, permissions: true })
 ```
+
+<hr>
+
+## [Home](/README.md)
+
+### Modules
+
+*   [extract](/libs/extract/docs/API.md)
+
+### Namespaces
+
+*   [deep-props](/docs/global.md)
+*   [extract](/libs/extract/docs/global.md)

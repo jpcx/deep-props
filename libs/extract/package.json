@@ -1,15 +1,14 @@
 {
-  "name": "deep-props",
+  "name": "deep-props.extract",
   "version": "0.1.0",
-  "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
+  "description": "Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.",
   "engines": {
     "node": ">=8.7.0"
   },
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
-    "prepare": "npm run-script build-docs; npm test",
-    "build-docs": "jsdoc . -c build/.jsdoc.conf.json --readme README.md -d build/jsdoc; node build/markdown.js; rm -r build/jsdoc"
+    "test": "node test.js standalone",
+    "prepare": "npm test"
   },
   "keywords": [
     "unpack",
@@ -21,8 +20,7 @@
     "object",
     "array",
     "map",
-    "set",
-    "tools"
+    "set"
   ],
   "author": "Justin Collier",
   "repository": "github:jpcx/deep-props",
