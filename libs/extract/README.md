@@ -229,7 +229,7 @@ Description of a given level of the chain. Transformed Prop Object with location
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [tags on this repository](https://github.com/jpcx/deep-props/tags).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/libs/extract/CHANGELOG.md).
 
 ## Author
 

@@ -69,7 +69,7 @@ const get = props.get
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [tags on this repository](https://github.com/jpcx/deep-props/tags).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/CHANGELOG.md).
 
 ## Contribution
 
