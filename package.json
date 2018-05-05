@@ -1,7 +1,7 @@
 {
   "name": "deep-props",
-  "version": "0.0.8",
-  "description": "Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.",
+  "version": "0.1.0",
+  "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
   "engines": {
     "node": ">=8.7.0"
   },
@@ -21,7 +21,8 @@
     "object",
     "array",
     "map",
-    "set"
+    "set",
+    "tools"
   ],
   "author": "Justin Collier",
   "repository": "github:jpcx/deep-props",
