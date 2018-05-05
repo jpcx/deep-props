@@ -27,9 +27,11 @@
 
 /**
  * Function used for custom handling of entry into next level of the dataset.
- * + Allows for extraction from container objects that are not directly supported.
- * + Returns new value of Target based on key.
- * + Returns undefined if Target is not compatible with the filter.
+ * <ul>
+ *   <li> Allows for extraction from container objects that are not directly supported.
+ *   <li> Returns new value of Target based on key.
+ *   <li> Returns undefined if Target is not compatible with the filter.
+ * </ul>
  *
  * @typedef {function} deep-props.get~GetCustomizer
  * @param   {deep-props.get~Target} target - Current data being analyzed

@@ -21,7 +21,7 @@ Gets a value from a Target behind a Key. Checks getCustomizer first, if it is pr
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 173](/libs/get/index.js#L173)
+*   [libs/get/index.js](/libs/get/index.js), [line 175](/libs/get/index.js#L175)
 
 ##### Returns:
 
@@ -54,7 +54,7 @@ Gets a key from a map, if it exists. Looks for key as key first; if not found, l
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 136](/libs/get/index.js#L136)
+*   [libs/get/index.js](/libs/get/index.js), [line 138](/libs/get/index.js#L138)
 
 ##### Returns:
 
@@ -87,7 +87,7 @@ Checks to see if a Set has a key. If so, returns the key. If not found, looks fo
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 154](/libs/get/index.js#L154)
+*   [libs/get/index.js](/libs/get/index.js), [line 156](/libs/get/index.js#L156)
 
 ##### Returns:
 
@@ -120,7 +120,7 @@ Checks for String objects and properties attached to them. If not, checks for JS
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 111](/libs/get/index.js#L111)
+*   [libs/get/index.js](/libs/get/index.js), [line 113](/libs/get/index.js#L113)
 
 ##### Returns:
 
@@ -171,7 +171,7 @@ Iterates along the supplied path and shifts a reference point along the way.
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 220](/libs/get/index.js#L220)
+*   [libs/get/index.js](/libs/get/index.js), [line 222](/libs/get/index.js#L222)
 
 ##### Returns:
 
@@ -212,7 +212,11 @@ query.next()
 <a name="~GetCustomizer"></a>
 #### GetCustomizer(target, key) → \{[deep-props.get~Target](/libs/get/docs/global.md#~Target)}
 
-Function used for custom handling of entry into next level of the dataset. + Allows for extraction from container objects that are not directly supported. + Returns new value of Target based on key. + Returns undefined if Target is not compatible with the filter.
+Function used for custom handling of entry into next level of the dataset.
+
+*   Allows for extraction from container objects that are not directly supported.
+*   Returns new value of Target based on key.
+*   Returns undefined if Target is not compatible with the filter.
 
 ##### Parameters:
 
@@ -262,7 +266,7 @@ Settings for customizing behaviour.
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 46](/libs/get/index.js#L46)
+*   [libs/get/index.js](/libs/get/index.js), [line 48](/libs/get/index.js#L48)
 
 ##### Example
 
@@ -296,7 +300,7 @@ Instructions that specify which keys should be accessed at each level of the dat
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 65](/libs/get/index.js#L65)
+*   [libs/get/index.js](/libs/get/index.js), [line 67](/libs/get/index.js#L67)
 
 ##### Examples
 

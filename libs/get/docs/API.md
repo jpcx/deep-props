@@ -13,7 +13,7 @@ Retrieves a nested property from a data source by iterating over a supplied path
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 239](/libs/get/index.js#L239)
+*   [libs/get/index.js](/libs/get/index.js), [line 241](/libs/get/index.js#L241)
 
 ##### Returns:
 
