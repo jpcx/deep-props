@@ -22,7 +22,7 @@ Node.JS version 8.7.0 or above.
 
 ### Installing
 
-```bash
+```console
 npm install deep-props.extract
 ```
 
@@ -30,7 +30,7 @@ npm install deep-props.extract
 
 The following command will test the package for errors. It prints a large selection of examples to the console; scroll through its output if you want to learn more about the utility.
 
-```bash
+```console
 npm test --prefix /path/to/node_modules/deep-props.extract
 ```
 
@@ -152,6 +152,10 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 
 ## Documentation
 
+#### See:
+* [API Docs](/libs/extract/docs/API.md)
+* [Global Docs](/libs/extract/docs/global.md)
+
 ### Module: extract
 
 Creates an array of deep paths and properties associated with an object. Non-recursively iterates through unpacked children until an endpoint is reached. Optionally traverses prototypes and non-enumerable properties. Endpoints may be previously discovered object references, primitives, or objects without children.
@@ -222,10 +226,6 @@ Description of a given level of the chain. Transformed Prop Object with location
 | `parentIsSealed` | boolean | \<optional> | Sealed status of the parent object. |
 | `parentIsExtensible` | boolean | \<optional> | Extensible status of the parent object. |
 | `ref` | [deep-props.extract~Ref](/libs/extract/docs/global.md#~Ref) | \<optional> | If the value strictly equals a previously discovered Container, the path and Host (if applicable) of that Container will be provided. |
-
-### See
-* [API Docs](/libs/extract/docs/API.md)
-* [Global Docs](/libs/extract/docs/global.md)
 
 ## Versioning
 
