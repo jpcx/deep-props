@@ -158,7 +158,7 @@ Type
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/libs/get/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](/libs/get/CHANGELOG.md).
 
 ## Contribution
 

@@ -229,7 +229,7 @@ Description of a given level of the chain. Transformed Prop Object with location
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/libs/extract/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](/libs/extract/CHANGELOG.md).
 
 ## Contribution
 

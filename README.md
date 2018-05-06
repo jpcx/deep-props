@@ -69,7 +69,7 @@ const get = props.get
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [CHANGELOG](/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](/CHANGELOG.md).
 
 ## Contribution
 
