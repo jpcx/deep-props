@@ -1,6 +1,6 @@
 {
   "name": "deep-props.extract",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.",
   "engines": {
     "node": ">=8.7.0"
