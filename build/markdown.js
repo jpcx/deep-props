@@ -12,7 +12,7 @@
  * @private
  * @param   {Object} fs       - I/O module.
  * @param   {string} jsdocLoc - Local folder location of JSDoc HTML.
- * @param   {Object} mappings - Maps local HTML locations to desired MD locations.
+ * @param   {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {Object} Object with destinations as keys and values as HTML.
  */
 const getHTML = (fs, jsdocLoc, mappings) => Object.keys(
@@ -20,7 +20,7 @@ const getHTML = (fs, jsdocLoc, mappings) => Object.keys(
 ).reduce(
   (HTML, key) => {
     HTML[mappings[key]] = fs.readFileSync(
-      process.cwd() + jsdocLoc + key,
+      process.cwd() + '/' + jsdocLoc + '/' + key,
       'utf8'
     )
     return HTML
@@ -191,8 +191,8 @@ const formatSourceCodeURLs = string => string.split(
  * Replaces links to module HTML pages.
  *
  * @private
- * @param   {string} string - Search string.
- * @param   {Object} mappings - Maps local HTML locations to desired MD.
+ * @param   {string} string   - Search string.
+ * @param   {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {string} Formatted string.
  */
 const replaceModuleLinks = (string, mappings) => Object.entries(
@@ -207,7 +207,7 @@ const replaceModuleLinks = (string, mappings) => Object.entries(
       ),
       'g'
     ),
-    entry[1]
+    entry[1].remote + '/blob/' + entry[1].version + '/' + entry[1].name
   ),
   string
 )
@@ -216,9 +216,9 @@ const replaceModuleLinks = (string, mappings) => Object.entries(
  * Applies any post-processing filters to markdown.
  *
  * @private
- * @param   {Object} markdown - Object with paths as keys and markdown strings as values.
- * @param   {string} jsdocLoc - Local folder location of JSDoc HTML.
- * @param   {Object} mappings - Maps local HTML locations to desired MD locations.
+ * @param   {Object} markdown  - Object with paths as keys and markdown strings as values.
+ * @param   {string} jsdocLoc  - Local folder location of JSDoc HTML.
+ * @param   {Object} mappings  - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {Object} Processed markdown Object.
  */
 const postProcess = (markdown, jsdocLoc, mappings) => Object.keys(
@@ -280,8 +280,8 @@ const convertHTML = HTML => {
  * Valid as of JSDoc v3.5.5, turndown v4.0.2, and turndown-plugin-gfm v1.0.1.
  *
  * @private
- * @param {string} jsdocLoc - Local folder location of JSDoc HTML.
- * @param {Object} mappings - Maps local HTML locations to desired MD locations.
+ * @param {string} jsdocLoc  - Local folder location of JSDoc HTML.
+ * @param {Object} mappings  - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @see {@link https://www.npmjs.com/package/turndown-plugin-gfm}
  */
 const writeMarkdown = (jsdocLoc, mappings) => {
@@ -298,12 +298,37 @@ const writeMarkdown = (jsdocLoc, mappings) => {
 }
 
 writeMarkdown(
-  '/build/jsdoc/',
+  'build/jsdoc',
   {
-    'deep-props.html': '/docs/global.md',
-    'module-extract.html': '/libs/extract/docs/API.md',
-    'deep-props.extract.html': '/libs/extract/docs/global.md',
-    'module-get.html': '/libs/get/docs/API.md',
-    'deep-props.get.html': '/libs/get/docs/global.md'
+    'deep-props.html': {
+      name: 'global.md',
+      local: 'docs',
+      remote: 'https://github.com/jpcx/deep-props',
+      version: '0.1.0'
+    },
+    'module-extract.html': {
+      name: 'API.md',
+      local: 'libs/extract/docs',
+      remote: 'https://github.com/jpcx/deep-props.extract',
+      version: '0.1.0'
+    },
+    'deep-props.extract.html': {
+      name: 'global.md',
+      local: 'libs/extract/docs',
+      remote: 'https://github.com/jpcx/deep-props.extract',
+      version: '0.1.0'
+    },
+    'module-get.html': {
+      name: 'API.md',
+      local: 'libs/get/docs',
+      remote: 'https://github.com/jpcx/deep-props.get',
+      version: '0.1.0'
+    },
+    'deep-props.get.html': {
+      name: 'global.md',
+      local: 'libs/get/docs',
+      remote: 'https://github.com/jpcx/deep-props.get',
+      version: '0.1.0'
+    }
   }
 )
