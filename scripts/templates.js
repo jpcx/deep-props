@@ -140,7 +140,7 @@ const buildFromTemplates = (templatesLoc, aliases) => {
 }
 
 buildFromTemplates(
-  'build/templates',
+  'scripts/templates',
   {
     'deep-props_tag': '0.2.0',
     'deep-props.extract_tag': '0.1.1',

@@ -405,7 +405,7 @@ const writeMarkdown = (jsdocLoc, mappings) => {
 }
 
 writeMarkdown(
-  'build/jsdoc',
+  'scripts/jsdoc',
   {
     'deep-props.html': {
       local: '',
