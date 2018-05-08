@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/deep-props.extract.png)](https://nodei.co/npm/deep-props.extract/)
 
-Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
+$$${file///libs/extract/package.json///split-gm///^  "description": "([\s\S]+?)",?\n///}$$$
 
 Endpoints may be previously discovered object references, primitives, or objects whose children are inaccessible due to settings or otherwise.
 

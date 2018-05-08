@@ -2,17 +2,17 @@
 
 [![NPM](https://nodei.co/npm/deep-props.png)](https://nodei.co/npm/deep-props/)
 
-__Migration notice: users of deep-props <= v0.0.8 must replace module calls with deep-props.extract. See the [deployment instructions](#deployment) below or install the [deep-props.extract](/libs/extract/README.md) standalone package. All other functionality is the same.__
+__Migration notice: users of deep-props <= v0.0.8 must replace module calls with deep-props.extract. See the [deployment instructions](#deployment) below or install the [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/README.md) standalone package. All other functionality is the same.__
 
 Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
 
 <a name="submodules"></a>
 #### Submodules:
-+ __[extract](/libs/extract/README.md)__
++ __[extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/README.md)__
 
   [![NPM](https://nodei.co/npm/deep-props.extract.png?mini=true)](https://nodei.co/npm/deep-props.extract/)
   + Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.
-+ __[get](/libs/get/README.md)__
++ __[get](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)__
 
   [![NPM](https://nodei.co/npm/deep-props.get.png?mini=true)](https://nodei.co/npm/deep-props.get/)
   + Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
@@ -53,23 +53,23 @@ const get = props.get
 ## Documentation
 
 ##### Module README files:
-+ [extract](/libs/extract/README.md)
-+ [get](/libs/get/README.md)
++ [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/README.md)
++ [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
 
 ##### API Usage Documentation files:
-+ [extract](/libs/extract/docs/API.md)
-+ [get](/libs/get/docs/API.md)
++ [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
++ [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
 ##### Module-Specific Type Definitions and Functions:
-+ [extract](/libs/extract/docs/global.md)
-+ [get](/libs/get/docs/global.md)
++ [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/global.md)
++ [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
 
 ##### Global Namespace Type Definitions:
-+ [deep-props](/docs/global.md)
++ [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props/blob/0.2.0/CHANGELOG.md).
 
 ## Contribution
 
@@ -81,4 +81,4 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/0.2.0/LICENSE) file for details

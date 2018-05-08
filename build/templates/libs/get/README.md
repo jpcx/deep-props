@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/deep-props.get.png)](https://nodei.co/npm/deep-props.get/)
 
-Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
+$$${file///libs/get/package.json///split-gm///^  "description": "([\s\S]+?)",?\n///}$$$
 
 Any unsupported data structure may be accessed by supplying a customizer function. See [<code>this example</code>](#customizer_example).
 
