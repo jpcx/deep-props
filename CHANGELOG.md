@@ -11,7 +11,7 @@ Changelog
 | --- | --- |
 
 #### Bumps
-+ __extract:__ [0.1.1](/libs/extract/CHANGELOG.md#0.1.1)
++ __extract:__ [0.1.1](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.1)
 
 #### Features
 + __API:__ Added deep-props.get submodule.
