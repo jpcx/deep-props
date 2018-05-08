@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node test.js",
     "prepare": "npm run-script build-docs; npm test",
-    "build-docs": "jsdoc . -c build/.jsdoc.conf.json --readme README.md -d build/jsdoc; node build/markdown.js; rm -r build/jsdoc"
+    "build-docs": "jsdoc . -c build/.jsdoc.conf.json --readme README.md -d build/jsdoc; node build/jsdoc.js; rm -r build/jsdoc; node build/templates.js"
   },
   "keywords": [
     "unpack",

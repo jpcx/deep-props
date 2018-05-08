@@ -419,14 +419,14 @@ writeMarkdown(
       path: 'docs',
       file: 'API.md',
       repo: 'https://github.com/jpcx/deep-props.extract',
-      tag: '0.1.0'
+      tag: '0.1.1'
     },
     'deep-props.extract.html': {
       local: 'libs/extract',
       path: 'docs',
       file: 'global.md',
       repo: 'https://github.com/jpcx/deep-props.extract',
-      tag: '0.1.0'
+      tag: '0.1.1'
     },
     'module-get.html': {
       local: 'libs/get',
