@@ -7,13 +7,13 @@ Retrieves a nested property from a data source by iterating over a supplied path
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](/docs/global.md#~Host) |  |  | Container to search within. |
-| `path` | [deep-props.get~Path](/libs/get/docs/global.md#~Path) |  |  | Path to desired property. |
-| `opt` | [deep-props.get~Options](/libs/get/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Host) |  |  | Container to search within. |
+| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) |  |  | Path to desired property. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
-*   [libs/get/index.js](/libs/get/index.js), [line 241](/libs/get/index.js#L241)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 241](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L241)
 
 ##### Returns:
 
@@ -21,7 +21,7 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
-[deep-props.get~Target](/libs/get/docs/global.md#~Target) | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -99,11 +99,11 @@ for (let step of query) {
 
 ### Modules
 
-*   [extract](/libs/extract/docs/API.md)
-*   [get](/libs/get/docs/API.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/API.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
 ### Namespaces
 
-*   [deep-props](/docs/global.md)
-*   [extract](/libs/extract/docs/global.md)
-*   [get](/libs/get/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/global.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)

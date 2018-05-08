@@ -7,12 +7,12 @@ Creates an array of deep paths and properties associated with an object. Non-rec
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](/docs/global.md#~Host) |  |  | Object to unpack. |
-| `opt` | [deep-props.extract~Options](/libs/extract/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Host) |  |  | Object to unpack. |
+| `opt` | [deep-props.extract~Options](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
-*   [libs/extract/index.js](/libs/extract/index.js), [line 919](/libs/extract/index.js#L919)
+*   [deep-props.extract/index.js](https://github.com/jpcx/deep-props.extract/blob/0.1.0/index.js), [line 919](https://github.com/jpcx/deep-props.extract/blob/0.1.0/index.js#L919)
 
 ##### Returns:
 
@@ -20,7 +20,7 @@ Array of paths and values or references. Returns Search generator if opt.gen is 
 
 Type
 
-Array.<[deep-props.extract~PropAt](/libs/extract/docs/global.md#~PropAt)> | [deep-props~ResultGenerator](/docs/global.md#~ResultGenerator)
+Array.<[deep-props.extract~PropAt](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/global.md#~PropAt)> | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -181,11 +181,11 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 
 ### Modules
 
-*   [extract](/libs/extract/docs/API.md)
-*   [get](/libs/get/docs/API.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/API.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
 ### Namespaces
 
-*   [deep-props](/docs/global.md)
-*   [extract](/libs/extract/docs/global.md)
-*   [get](/libs/get/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.0/docs/global.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)

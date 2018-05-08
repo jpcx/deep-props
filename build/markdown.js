@@ -19,7 +19,14 @@ const getHTML = (fs, jsdocLoc, mappings) => Object.keys(
   mappings
 ).reduce(
   (HTML, key) => {
-    HTML[mappings[key]] = fs.readFileSync(
+    const localPath = (
+      mappings[key].local +
+      '/' +
+      mappings[key].path +
+      '/' +
+      mappings[key].file
+    )
+    HTML[localPath] = fs.readFileSync(
       process.cwd() + '/' + jsdocLoc + '/' + key,
       'utf8'
     )
@@ -109,7 +116,7 @@ const fixAsterixBullets = string => string.replace(
  * @returns {string} Formatted string.
  */
 const removeTopNamespace = string => string.replace(
-  /^Namespace: [\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*\n=*\n\n([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`.]*)\n-*\n$/gm,
+  /^Namespace: [\w\d\-._~:/?#[\]@!$&'()*\\+,;=`]*\n=*\n\n([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`]*)\n-*\n$/gm,
   '# $1\n'
 )
 
@@ -126,7 +133,7 @@ const addsHomeFooterHorizontal = string => string.replace(
 )
 
 /**
- * Replaces source code urls with links to local code location and replaces #line links to GitHub-flavored #L links.
+ * Replaces source code urls with links to GitHub code locations and replaces #line links to GitHub-flavored #L links.
  *
  * @private
  * @param   {string} string - Search string.
@@ -153,10 +160,8 @@ const formatSourceCodeURLs = string => string.split(
           '.js'
         )
       )
-    } else if (i % 2 === 0) {
-      return formatted + block
     } else {
-      return formatted
+      return formatted + block
     }
   },
   ''
@@ -178,10 +183,8 @@ const formatSourceCodeURLs = string => string.split(
           '.js'
         )
       )
-    } else if (i % 2 === 0) {
-      return formatted + block
     } else {
-      return formatted
+      return formatted + block
     }
   },
   ''
@@ -207,9 +210,113 @@ const replaceModuleLinks = (string, mappings) => Object.entries(
       ),
       'g'
     ),
-    entry[1].remote + '/blob/' + entry[1].version + '/' + entry[1].name
+    entry[1].repo +
+    '/blob/' +
+    entry[1].tag +
+    '/' +
+    entry[1].path +
+    '/' +
+    entry[1].file
   ),
   string
+)
+
+/**
+ * Replaces relative source code links with remote links.
+ *
+ * @private
+ * @param {string} string   - Search string.
+ * @param {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @returns {string} Formatted string.
+ */
+const replaceSourceCodeLinks = (string, mappings) => string.split(
+  /(\]\([/\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*.js[#L\d]*\))/g
+).reduce(
+  (newString, chunk, i) => {
+    if (i === 0) {
+      return chunk
+    } else if ((i + 1) % 2 === 0) {
+      for (let val of Object.values(mappings)) {
+        if (val.local !== '') {
+          if (
+            chunk.match('/' + val.local) !== null &&
+            chunk.match('/' + val.local).index === 2
+          ) {
+            return (
+              newString +
+              '](' +
+              val.repo +
+              '/blob/' +
+              val.tag +
+              chunk.slice(val.local.length + 3)
+            )
+          }
+        }
+      }
+      for (let val of Object.values(mappings)) {
+        if (val.local === '') {
+          return (
+            newString +
+            '](' +
+            val.repo +
+            '/blob/' +
+            val.tag +
+            chunk.slice(2)
+          )
+        }
+      }
+      return newString + chunk
+    } else {
+      return newString + chunk
+    }
+  },
+  ''
+).split(
+  /(\[[/\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*.js[#L\d]*\]\()/g
+).reduce(
+  (newString, chunk, i) => {
+    if (i === 0) {
+      return chunk
+    } else if ((i + 1) % 2 === 0) {
+      for (let val of Object.values(mappings)) {
+        if (val.local !== '') {
+          if (
+            chunk.match(val.local) !== null &&
+            chunk.match(val.local).index === 1
+          ) {
+            return (
+              newString +
+              '[' +
+              val.repo.replace(
+                /(?:https?:\/\/)?(?:www\.)?github\.com\/[\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*\/([\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*)$/gm,
+                '$1'
+              ) +
+              '/' +
+              chunk.slice(val.local.length + 2)
+            )
+          }
+        }
+      }
+      for (let val of Object.values(mappings)) {
+        if (val.local === '') {
+          return (
+            newString +
+            '[' +
+            val.repo.replace(
+              /(?:https?:\/\/)?(?:www\.)?github\.com\/[\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*\/([\w\d\-._~:?#[\]@!$&'()*\\+,;=`]*)$/gm,
+              '$1'
+            ) +
+            '/' +
+            chunk.slice(1)
+          )
+        }
+      }
+      return newString + chunk
+    } else {
+      return newString + chunk
+    }
+  },
+  ''
 )
 
 /**
@@ -217,11 +324,10 @@ const replaceModuleLinks = (string, mappings) => Object.entries(
  *
  * @private
  * @param   {Object} markdown  - Object with paths as keys and markdown strings as values.
- * @param   {string} jsdocLoc  - Local folder location of JSDoc HTML.
  * @param   {Object} mappings  - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {Object} Processed markdown Object.
  */
-const postProcess = (markdown, jsdocLoc, mappings) => Object.keys(
+const postProcess = (markdown, mappings) => Object.keys(
   markdown
 ).reduce(
   (proc, key) => {
@@ -233,7 +339,8 @@ const postProcess = (markdown, jsdocLoc, mappings) => Object.keys(
     proc[key] = removeTopNamespace(proc[key])
     proc[key] = addsHomeFooterHorizontal(proc[key])
     proc[key] = formatSourceCodeURLs(proc[key])
-    proc[key] = replaceModuleLinks(proc[key], jsdocLoc, mappings)
+    proc[key] = replaceModuleLinks(proc[key], mappings)
+    proc[key] = replaceSourceCodeLinks(proc[key], mappings)
     proc[key] = proc[key].trim()
     return proc
   },
@@ -290,7 +397,7 @@ const writeMarkdown = (jsdocLoc, mappings) => {
   const markdown = postProcess(convertHTML(HTML), mappings)
   for (let key of Object.keys(markdown)) {
     fs.writeFileSync(
-      process.cwd() + key,
+      process.cwd() + '/' + key,
       markdown[key],
       'utf8'
     )
@@ -301,34 +408,39 @@ writeMarkdown(
   'build/jsdoc',
   {
     'deep-props.html': {
-      name: 'global.md',
-      local: 'docs',
-      remote: 'https://github.com/jpcx/deep-props',
-      version: '0.1.0'
+      local: '',
+      path: 'docs',
+      file: 'global.md',
+      repo: 'https://github.com/jpcx/deep-props',
+      tag: '0.1.0'
     },
     'module-extract.html': {
-      name: 'API.md',
-      local: 'libs/extract/docs',
-      remote: 'https://github.com/jpcx/deep-props.extract',
-      version: '0.1.0'
+      local: 'libs/extract',
+      path: 'docs',
+      file: 'API.md',
+      repo: 'https://github.com/jpcx/deep-props.extract',
+      tag: '0.1.0'
     },
     'deep-props.extract.html': {
-      name: 'global.md',
-      local: 'libs/extract/docs',
-      remote: 'https://github.com/jpcx/deep-props.extract',
-      version: '0.1.0'
+      local: 'libs/extract',
+      path: 'docs',
+      file: 'global.md',
+      repo: 'https://github.com/jpcx/deep-props.extract',
+      tag: '0.1.0'
     },
     'module-get.html': {
-      name: 'API.md',
-      local: 'libs/get/docs',
-      remote: 'https://github.com/jpcx/deep-props.get',
-      version: '0.1.0'
+      local: 'libs/get',
+      path: 'docs',
+      file: 'API.md',
+      repo: 'https://github.com/jpcx/deep-props.get',
+      tag: '0.1.0'
     },
     'deep-props.get.html': {
-      name: 'global.md',
-      local: 'libs/get/docs',
-      remote: 'https://github.com/jpcx/deep-props.get',
-      version: '0.1.0'
+      local: 'libs/get',
+      path: 'docs',
+      file: 'global.md',
+      repo: 'https://github.com/jpcx/deep-props.get',
+      tag: '0.1.0'
     }
   }
 )
