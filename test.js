@@ -88,3 +88,5 @@ console.log()
 
 console.log('Total Tests Attempted: ' + totalTestsAttempt)
 console.log('Total Operational Failures: ' + numFailed)
+
+if (numFailed > 0) throw Error('Failed Tests!')

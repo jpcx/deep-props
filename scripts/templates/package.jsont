@@ -8,9 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "prepare": "npm run-script build; npm test",
+    "prepare": "npm run-script build && npm test",
     "build": "sh scripts/build.sh",
-    "build-jsdoc": "jsdoc . -c scripts/jsdoc.conf.json --readme README.md -d docs/jsdoc"
+    "build-jsdoc": "jsdoc . -c .jsdoc.conf.json --readme README.md -d docs/jsdoc"
   },
   "keywords": ___{alias:deep-props/keywords___JSON}___,
   "author": "Justin Collier",

@@ -363,7 +363,6 @@ const postProcess = (markdown, mappings) => Object.keys(
   markdown
 ).reduce(
   (proc, key) => {
-    console.log(key)
     proc[key] = tagCodeBlocksAsJS(proc[key])
     proc[key] = fixReturnBrackets(proc[key])
     proc[key] = fixOptionalTags(proc[key])
