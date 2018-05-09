@@ -1,0 +1,23 @@
+{
+  "name": "deep-props.extract",
+  "version": "___{alias:deep-props.extract/tag}___",
+  "description": "___{alias:deep-props.extract/description}___",
+  "engines": {
+    "node": ">=___{alias:deep-props.extract/node}___"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js standalone",
+    "prepare": "npm test"
+  },
+  "keywords": ___{alias:deep-props.extract/keywords___JSON}___,
+  "author": "Justin Collier",
+  "repository": "github:jpcx/deep-props.extract",
+  "bugs": {
+    "url": "https://github.com/jpcx/deep-props.extract/issues",
+    "email": "jpcxme@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": ___{alias:deep-props.extract/dependencies___JSON}___,
+  "devDependencies": ___{alias:deep-props/devDependencies___JSON}___
+}

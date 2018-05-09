@@ -1,0 +1,123 @@
+{
+  "jsdocLoc": "scripts/~jsdoc",
+  "templatesLoc": "scripts/templates",
+  "packages": {
+    "deep-props": {
+      "repo": "https://github.com/jpcx/deep-props",
+      "tag": "0.2.0",
+      "node": "8.7.0",
+      "jsdoc": [
+        {
+          "origin": "deep-props.html",
+          "destination": {
+            "local": "",
+            "path": "docs",
+            "file": "global.md"
+          }
+        }
+      ],
+      "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
+      "keywords": [
+        "unpack",
+        "deep",
+        "paths",
+        "nested",
+        "property",
+        "descriptors",
+        "object",
+        "array",
+        "map",
+        "set",
+        "tools"
+      ],
+      "dependencies": {},
+      "devDependencies": {
+        "assert": "^1.4.1",
+        "eslint": "^4.19.1",
+        "eslint-plugin-jsdoc": "^3.5.0",
+        "eslint-plugin-node": "^6.0.1",
+        "jsdoc": "^3.5.5",
+        "standard": "^11.0.1",
+        "turndown": "^4.0.2",
+        "turndown-plugin-gfm": "^1.0.1"
+      }
+    },
+    "deep-props.extract": {
+      "repo": "https://github.com/jpcx/deep-props.extract",
+      "tag": "0.1.1",
+      "node": "8.7.0",
+      "jsdoc": [
+        {
+          "origin": "module-extract.html",
+          "destination": {
+            "local": "libs/extract",
+            "path": "docs",
+            "file": "API.md"
+          }
+        },
+        {
+          "origin": "deep-props.extract.html",
+          "destination": {
+            "local": "libs/extract",
+            "path": "docs",
+            "file": "global.md"
+          }
+        }
+      ],
+      "description": "Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.",
+      "keywords": [
+        "unpack",
+        "deep",
+        "paths",
+        "nested",
+        "property",
+        "descriptors",
+        "object",
+        "array",
+        "map",
+        "set"
+      ],
+      "dependencies": {}
+    },
+    "deep-props.get": {
+      "repo": "https://github.com/jpcx/deep-props.get",
+      "tag": "0.1.0",
+      "node": "8.7.0",
+      "jsdoc": [
+        {
+          "origin": "module-get.html",
+          "destination": {
+            "local": "libs/get",
+            "path": "docs",
+            "file": "API.md"
+          }
+        },
+        {
+          "origin": "deep-props.get.html",
+          "destination": {
+            "local": "libs/get",
+            "path": "docs",
+            "file": "global.md"
+          }
+        }
+      ],
+      "description": "Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.",
+      "keywords": [
+        "get",
+        "data",
+        "collection",
+        "nested",
+        "property",
+        "object",
+        "array",
+        "map",
+        "weakmap",
+        "json",
+        "bracket",
+        "dot",
+        "notation"
+      ],
+      "dependencies": {}
+    }
+  }
+}

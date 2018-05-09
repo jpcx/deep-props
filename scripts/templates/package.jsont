@@ -1,0 +1,25 @@
+{
+  "name": "deep-props",
+  "version": "___{alias:deep-props/tag}___",
+  "description": "___{alias:deep-props/description}___",
+  "engines": {
+    "node": ">=___{alias:deep-props/node}___"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "prepare": "npm run-script build; npm test",
+    "build": "sh scripts/build.sh",
+    "build-jsdoc": "jsdoc . -c scripts/jsdoc.conf.json --readme README.md -d docs/jsdoc"
+  },
+  "keywords": ___{alias:deep-props/keywords___JSON}___,
+  "author": "Justin Collier",
+  "repository": "github:jpcx/deep-props",
+  "bugs": {
+    "url": "https://github.com/jpcx/deep-props/issues",
+    "email": "jpcxme@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": ___{alias:deep-props/dependencies___JSON}___,
+  "devDependencies": ___{alias:deep-props/devDependencies___JSON}___
+}
