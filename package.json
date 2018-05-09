@@ -1,6 +1,6 @@
 {
   "name": "deep-props",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
   "engines": {
     "node": ">=8.7.0"
@@ -8,8 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "prepare": "npm run-script build-docs; npm test",
-    "build-docs": "jsdoc . -c scripts/.jsdoc.conf.json --readme README.md -d scripts/jsdoc; node scripts/jsdoc.js; rm -r scripts/jsdoc; node scripts/templates.js"
+    "prepare": "npm run-script build; npm test",
+    "build": "sh scripts/build.sh",
+    "build-jsdoc": "jsdoc . -c scripts/jsdoc.conf.json --readme README.md -d docs/jsdoc"
   },
   "keywords": [
     "unpack",
@@ -31,6 +32,7 @@
     "email": "jpcxme@gmail.com"
   },
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "assert": "^1.4.1",
     "eslint": "^4.19.1",

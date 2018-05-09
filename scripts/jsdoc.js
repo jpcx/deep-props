@@ -12,7 +12,7 @@
  * @private
  * @param   {Object} fs       - I/O module.
  * @param   {string} jsdocLoc - Local folder location of JSDoc HTML.
- * @param   {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @param   {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {Object} Object with destinations as keys and values as HTML.
  */
 const getHTML = (fs, jsdocLoc, mappings) => Object.keys(
@@ -21,7 +21,7 @@ const getHTML = (fs, jsdocLoc, mappings) => Object.keys(
   (HTML, key) => {
     const localPath = (
       mappings[key].local +
-      '/' +
+      (mappings[key].local !== '' ? '/' : '') +
       mappings[key].path +
       '/' +
       mappings[key].file
@@ -116,20 +116,52 @@ const fixAsterixBullets = string => string.replace(
  * @returns {string} Formatted string.
  */
 const removeTopNamespace = string => string.replace(
-  /^Namespace: [\w\d\-._~:/?#[\]@!$&'()*\\+,;=`]*\n=*\n\n([\w\d\-._~:/?#[\]@!$&'()*\\+,;=`]*)\n-*\n$/gm,
+  /^Namespace: [\s\S]*?\n=*\n\n([\s\S]*?)\n-*\n$/gm,
   '# $1\n'
+)
+
+/**
+ * Converts local path to GitHub URL.
+ *
+ * @private
+ * @param   {string} path     - Local path of string destination.
+ * @param   {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @returns {string} URL - Remote GitHub URL.
+ */
+const localPathToURL = (path, mappings) => Object.values(
+  mappings
+).reduce(
+  (URL, map) => {
+    if (URL === '') {
+      if (
+        path === (
+          map.local +
+          (map.local === '' ? '' : '/') +
+          map.path +
+          '/' +
+          map.file
+        )
+      ) {
+        URL = map.repo + '/blob/' + map.tag
+      }
+    }
+    return URL
+  },
+  ''
 )
 
 /**
  * Adds horizontal line before Home link footer.
  *
  * @private
- * @param   {string} string - Search string.
+ * @param   {string} string   - Search string.
+ * @param   {Object} path     - Local path of string destination.
+ * @param   {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {string} Formatted string.
  */
-const addsHomeFooterHorizontal = string => string.replace(
+const addsHomeFooterHorizontal = (string, path, mappings) => string.replace(
   /^\[Home\]\(index\.html\)\n-*\n/gm,
-  '<hr>\n\n## [Home](/README.md)\n'
+  `<hr>\n\n## [Home](${localPathToURL(path, mappings)}/README.md)\n`
 )
 
 /**
@@ -195,7 +227,7 @@ const formatSourceCodeURLs = string => string.split(
  *
  * @private
  * @param   {string} string   - Search string.
- * @param   {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @param   {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {string} Formatted string.
  */
 const replaceModuleLinks = (string, mappings) => Object.entries(
@@ -226,7 +258,7 @@ const replaceModuleLinks = (string, mappings) => Object.entries(
  *
  * @private
  * @param {string} string   - Search string.
- * @param {Object} mappings - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @param {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {string} Formatted string.
  */
 const replaceSourceCodeLinks = (string, mappings) => string.split(
@@ -324,20 +356,21 @@ const replaceSourceCodeLinks = (string, mappings) => string.split(
  *
  * @private
  * @param   {Object} markdown  - Object with paths as keys and markdown strings as values.
- * @param   {Object} mappings  - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @param   {Object} mappings  - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {Object} Processed markdown Object.
  */
 const postProcess = (markdown, mappings) => Object.keys(
   markdown
 ).reduce(
   (proc, key) => {
+    console.log(key)
     proc[key] = tagCodeBlocksAsJS(proc[key])
     proc[key] = fixReturnBrackets(proc[key])
     proc[key] = fixOptionalTags(proc[key])
     proc[key] = fixTableLineBreaks(proc[key])
     proc[key] = fixAsterixBullets(proc[key])
     proc[key] = removeTopNamespace(proc[key])
-    proc[key] = addsHomeFooterHorizontal(proc[key])
+    proc[key] = addsHomeFooterHorizontal(proc[key], key, mappings)
     proc[key] = formatSourceCodeURLs(proc[key])
     proc[key] = replaceModuleLinks(proc[key], mappings)
     proc[key] = replaceSourceCodeLinks(proc[key], mappings)
@@ -383,18 +416,17 @@ const convertHTML = HTML => {
 }
 
 /**
- * Builds the markdown documentation from the JSDoc output using the turndown module.
+ * Builds the markdown documentation from the JSDoc output using the turndown module and custom replacement functions.
  * Valid as of JSDoc v3.5.5, turndown v4.0.2, and turndown-plugin-gfm v1.0.1.
  *
  * @private
- * @param {string} jsdocLoc  - Local folder location of JSDoc HTML.
- * @param {Object} mappings  - Maps local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ * @param {Object} info  - Location of jsdoc output and map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @see {@link https://www.npmjs.com/package/turndown-plugin-gfm}
  */
-const writeMarkdown = (jsdocLoc, mappings) => {
+const writeMarkdown = info => {
   const fs = require('fs')
-  const HTML = getHTML(fs, jsdocLoc, mappings)
-  const markdown = postProcess(convertHTML(HTML), mappings)
+  const HTML = getHTML(fs, info.jsdocLoc, info.mappings)
+  const markdown = postProcess(convertHTML(HTML), info.mappings)
   for (let key of Object.keys(markdown)) {
     fs.writeFileSync(
       process.cwd() + '/' + key,
@@ -404,43 +436,37 @@ const writeMarkdown = (jsdocLoc, mappings) => {
   }
 }
 
-writeMarkdown(
-  'scripts/jsdoc',
-  {
-    'deep-props.html': {
-      local: '',
-      path: 'docs',
-      file: 'global.md',
-      repo: 'https://github.com/jpcx/deep-props',
-      tag: '0.1.0'
-    },
-    'module-extract.html': {
-      local: 'libs/extract',
-      path: 'docs',
-      file: 'API.md',
-      repo: 'https://github.com/jpcx/deep-props.extract',
-      tag: '0.1.1'
-    },
-    'deep-props.extract.html': {
-      local: 'libs/extract',
-      path: 'docs',
-      file: 'global.md',
-      repo: 'https://github.com/jpcx/deep-props.extract',
-      tag: '0.1.1'
-    },
-    'module-get.html': {
-      local: 'libs/get',
-      path: 'docs',
-      file: 'API.md',
-      repo: 'https://github.com/jpcx/deep-props.get',
-      tag: '0.1.0'
-    },
-    'deep-props.get.html': {
-      local: 'libs/get',
-      path: 'docs',
-      file: 'global.md',
-      repo: 'https://github.com/jpcx/deep-props.get',
-      tag: '0.1.0'
+/**
+ * Converts config.json to relevant mappings.
+ *
+ * @private
+ * @param   {string} config - Config.json for repository information.
+ * @retruns {Object} Location of jsdoc output and map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
+ */
+const parseConfig = config => {
+  const info = {}
+  info.jsdocLoc = config.jsdocLoc
+  info.mappings = {}
+  Object.values(config.packages).forEach(
+    pack => {
+      pack.jsdoc.forEach(
+        doc => {
+          info.mappings[doc.origin] = {
+            local: doc.destination.local,
+            path: doc.destination.path,
+            file: doc.destination.file,
+            repo: pack.repo,
+            tag: pack.tag
+          }
+        }
+      )
     }
-  }
+  )
+  return info
+}
+
+writeMarkdown(
+  parseConfig(
+    require(process.cwd() + '/' + process.argv[2])
+  )
 )
