@@ -4,11 +4,13 @@ Provides a collection of tools for performing operations on deeply nested object
 
 Source:
 
-*   [index.js](/index.js), [line 7](/index.js#L7)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L7)
 
 ### Namespaces
 
-[extract](/libs/extract/docs/global.md)
+[extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
+
+[get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
 
 ### Type Definitions
 
@@ -19,11 +21,11 @@ Container object used as a target for child property extraction.
 
 ##### Type:
 
-*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](/docs/global.md#~Custom)
+*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Custom)
 
 Source:
 
-*   [index.js](/index.js), [line 38](/index.js#L38)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 38](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L38)
 
 <a name="~Custom"></a>
 #### Custom
@@ -36,7 +38,7 @@ Custom dataset for use as a [Container](#~Container). May be accessed via valid 
 
 Source:
 
-*   [index.js](/index.js), [line 15](/index.js#L15)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L15)
 
 ##### Example
 
@@ -60,11 +62,11 @@ A non-primitive [Container](#~Container) which represents the root of a given pa
 
 ##### Type:
 
-*   [deep-props~Container](/docs/global.md#~Container)
+*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container)
 
 Source:
 
-*   [index.js](/index.js), [line 44](/index.js#L44)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 44](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L44)
 
 <a name="~Key"></a>
 #### Key
@@ -73,11 +75,11 @@ Key used for accessing a child property within a container. When its value is `'
 
 ##### Type:
 
-*   string | [deep-props~Container](/docs/global.md#~Container)
+*   string | [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container)
 
 Source:
 
-*   [index.js](/index.js), [line 32](/index.js#L32)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 32](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L32)
 
 <a name="~ResultGenerator"></a>
 #### ResultGenerator
@@ -90,17 +92,40 @@ Generator object which yields stepwise operation results.
 
 Source:
 
-*   [index.js](/index.js), [line 50](/index.js#L50)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 50](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L50)
+
+<a name="~Submodules"></a>
+#### Submodules
+
+Provides an interface to the deep-props submodules.
+
+##### Type:
+
+*   Object
+
+##### Properties:
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `extract` | [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md) | Extract module. |
+| `get` | [deep-props.get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md) | Get module. |
+
+Source:
+
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 56](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L56)
 
 <hr>
 
-## [Home](/README.md)
+## [Home](https://github.com/jpcx/deep-props/blob/0.2.0/README.md)
 
 ### Modules
 
-*   [extract](/libs/extract/docs/API.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/API.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
 ### Namespaces
 
-*   [deep-props](/docs/global.md)
-*   [extract](/libs/extract/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)

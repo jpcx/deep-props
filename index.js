@@ -53,6 +53,30 @@
  * @typedef {Object} deep-props~ResultGenerator
  */
 
+/**
+ * Provides an interface to the deep-props submodules.
+ *
+ * @typedef  {Object} deep-props~Submodules
+ * @property {deep-props.extract} extract - Extract module.
+ * @property {deep-props.get}     get     - Get module.
+ */
+
+/**
+ * Exports the deep-props submodules.
+ *
+ * @module deep-props
+ * @returns {deep-props~Submodules} Object containing submodules.
+ * @example
+ * // returns {
+ * //   extract: [Function: extract],
+ * //   get: [Function: get]
+ * // }
+ * const props = require('deep-props')
+ *
+ * const extract = props.extract
+ * const get = props.get
+ */
 module.exports = {
-  extract: require('./libs/extract')
+  extract: require('./libs/extract'),
+  get: require('./libs/get')
 }

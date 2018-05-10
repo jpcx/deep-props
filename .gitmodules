@@ -1,0 +1,6 @@
+[submodule "libs/extract"]
+	path = libs/extract
+	url = https://github.com/jpcx/deep-props.extract.git
+[submodule "libs/get"]
+	path = libs/get
+	url = https://github.com/jpcx/deep-props.get.git
