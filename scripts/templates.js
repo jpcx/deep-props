@@ -124,7 +124,7 @@ const replaceMarkers = (fs, mappings, aliases) => Object.entries(
         JSON.parse(formatted),
         null,
         2
-      )
+      ) + '\n'
     }
     newMaps[entry[0]] = formatted
     return newMaps
