@@ -94,12 +94,33 @@ Source:
 
 *   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 50](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L50)
 
+<a name="~Submodules"></a>
+#### Submodules
+
+Provides an interface to the deep-props submodules.
+
+##### Type:
+
+*   Object
+
+##### Properties:
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `extract` | [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md) | Extract module. |
+| `get` | [deep-props.get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md) | Get module. |
+
+Source:
+
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 56](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L56)
+
 <hr>
 
 ## [Home](https://github.com/jpcx/deep-props/blob/0.2.0/README.md)
 
 ### Modules
 
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/API.md)
 *   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
 *   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 

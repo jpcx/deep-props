@@ -8,6 +8,14 @@
       "node": "8.7.0",
       "jsdoc": [
         {
+          "origin": "module-deep-props.html",
+          "destination": {
+            "local": "",
+            "path": "docs",
+            "file": "API.md"
+          }
+        },
+        {
           "origin": "deep-props.html",
           "destination": {
             "local": "",

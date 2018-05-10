@@ -52,20 +52,30 @@ const get = props.get
 
 ## Documentation
 
-##### Module README files:
+Please see the associated README files for general usage information.
+
+API docs contain module parameters and return information. Links to type definitions are provided as well in order to explain in detail the types of expected inputs and outputs.
+
+Global docs contain all type definitions and functions used internally.
+
+##### README Files:
 + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/README.md)
 + [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
 
-##### API Usage Documentation files:
+##### API Docs:
++ [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/API.md)
 + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
 + [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
-##### Module-Specific Type Definitions and Functions:
+##### Changelogs:
++ [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/CHANGELOG.md)
++ [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md)
++ [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/CHANGELOG.md)
+
+##### Type Definitions and Global Functions:
++ [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
 + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/global.md)
 + [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
-
-##### Global Namespace Type Definitions:
-+ [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
 
 ## Versioning
 
