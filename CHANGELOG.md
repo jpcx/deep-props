@@ -2,7 +2,7 @@ Changelog
 =========
 
 <a name="0.2.0"></a>
-## [0.2.0](https://github.com/jpcx/deep-props/tree/0.2.0) (2018-05-05)
+## [0.2.0](https://github.com/jpcx/deep-props/tree/0.2.0) (2018-05-09)
 
 | __[Changes since 0.1.0](https://github.com/jpcx/deep-props/compare/0.1.0...0.2.0)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.0) | [README](https://github.com/jpcx/deep-props/tree/0.2.0/README.md) |
 | --- | --- | --- |
@@ -11,12 +11,15 @@ Changelog
 | --- | --- |
 
 #### Bumps
-+ __extract:__ [0.1.1](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.1)
++ __extract:__ [0.1.0](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.0) -> [0.1.1](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.1)
 
 #### Features
++ __repo:__ Moved submodules to dedicated repositories. Using submodule approach.
 + __API:__ Added deep-props.get submodule.
-+ __get:__ Submodule created.
 + __docs:__ Added changelog.
++ __docs:__ Improved documentation generation scripts.
++ __extract/docs:__ Improved documentation.
++ __get:__ Submodule created.
 
 #### Bugfixes
 + __docs:__ Replaced (U+2264) symbol with '<=' ([853bc99](https://github.com/jpcx/deep-props/commit/853bc99e0068f5d55acac1d5785eb50f8ceca3dc))
@@ -32,6 +35,8 @@ Changelog
 
 #### Breaking Changes
   + __API:__ Module functionality moved to deep-props.extract. See the [readme](https://github.com/jpcx/deep-props/tree/0.1.0/README.md) for more information.
+
+#### Features
   + __extract:__ Submodule created.
 
 <a name="0.0.8"></a>
