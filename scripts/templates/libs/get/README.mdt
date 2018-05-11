@@ -70,9 +70,13 @@ const nest = new Map().set(
   )
 )
 
-// Both return 'quz'
+// All return 'quz'
+// Note: either strict keys or insertion order may be used.
 get(nest, 'foo.bar.baz.qux')
 get(nest, [ 'foo', 'bar', 'baz', 'qux' ])
+get(nest, 'foo.bar.baz.0')
+get(nest, '0.0.0.0')
+get(nest, [ 0, 0, 0, 0 ])
 ```
 
 **Nested Map Extraction with Non-Primitive Keys**
@@ -89,9 +93,11 @@ const nest = new Map().set(
   )
 )
 
-// Returns 'thud'
-// Note: this path must be an array of Object references.
+// All return 'thud'
+// Note: this path must either be an array of Object references or descriptions of insertion order.
 get(nest, [ keyA, keyB, keyC ])
+get(nest, '0.0.0')
+get(nest, [ 0, 0, 0 ])
 ```
 
 **Nested WeakMap Extraction**

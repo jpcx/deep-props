@@ -1,6 +1,39 @@
 Changelog
 =========
 
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/jpcx/deep-props/tree/0.2.4) (2018-05-11)
+
+| __[Changes since 0.2.2](https://github.com/jpcx/deep-props/compare/0.2.3...0.2.4)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.4) | [README](https://github.com/jpcx/deep-props/tree/0.2.4/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.4.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.4.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __extract:__ [0.1.3](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.3) -> [0.1.4](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.4)
+
+#### Bugfixes
+  + __docs:__ Fixed version numbers.
+  + __docs:__ Added bumps to changelog.
+
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/jpcx/deep-props/tree/0.2.3) (2018-05-11)
+
+| __[Changes since 0.2.2](https://github.com/jpcx/deep-props/compare/0.2.2...0.2.3)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.3) | [README](https://github.com/jpcx/deep-props/tree/0.2.3/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.3.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.3.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __extract:__ [0.1.2](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.2) -> [0.1.3](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.3)
+  + __get:__ [0.1.1](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.1) -> [0.1.2](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.2)
+
+#### Bugfixes
+  + __docs:__ Reclassified package-lock additions as bugfixes in changelog.
+  + __get/docs:__ Clarified map insertion order documentation.
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/jpcx/deep-props/tree/0.2.2) (2018-05-11)
 
@@ -29,10 +62,8 @@ Changelog
 #### Bugfixes
   + __docs:__ Modified document generation scripts and templates to allow for independent submodule releases.
   + __NPM:__ Modified document generation scripts to create newline at end of JSON files (package.json).
-  + __get/docs:__ Fixed inaccurate description and examples.
-
-#### Features
   + __extract/NPM:__ Added package-lock.json.
+  + __get/docs:__ Fixed inaccurate description and examples.
   + __get/NPM:__ Added package-lock.json.
 
 <a name="0.2.0"></a>
