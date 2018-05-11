@@ -1,6 +1,18 @@
 Changelog
 =========
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/jpcx/deep-props/tree/0.2.2) (2018-05-11)
+
+| __[Changes since 0.2.1](https://github.com/jpcx/deep-props/compare/0.2.1...0.2.2)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.2) | [README](https://github.com/jpcx/deep-props/tree/0.2.2/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.2.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.2.tar.gz) |
+| --- | --- |
+
+#### Bugfixes
+  + __NPM:__ Removed empty set directory from npm package.
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/jpcx/deep-props/tree/0.2.1) (2018-05-10)
 
