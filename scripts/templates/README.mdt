@@ -8,14 +8,14 @@ ___{alias:deep-props/description}___
 
 <a name="submodules"></a>
 #### Submodules:
-+ __[extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/README.md)__
+  + __[extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/README.md)__
 
-  [![NPM](https://nodei.co/npm/deep-props.extract.png?mini=true)](https://nodei.co/npm/deep-props.extract/)
-  + ___{alias:deep-props.extract/description}___
-+ __[get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/README.md)__
+    [![NPM](https://nodei.co/npm/deep-props.extract.png?mini=true)](https://nodei.co/npm/deep-props.extract/)
+    + ___{alias:deep-props.extract/description}___
+  + __[get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/README.md)__
 
-  [![NPM](https://nodei.co/npm/deep-props.get.png?mini=true)](https://nodei.co/npm/deep-props.get/)
-  + ___{alias:deep-props.get/description}___
+    [![NPM](https://nodei.co/npm/deep-props.get.png?mini=true)](https://nodei.co/npm/deep-props.get/)
+    + ___{alias:deep-props.get/description}___
 
 ## Getting Started
 
@@ -59,23 +59,23 @@ API docs contain module parameters and return information. Links to type definit
 Global docs contain all type definitions and functions used internally.
 
 ##### README Files:
-+ [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/README.md)
-+ [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/README.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/README.md)
+  + [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/README.md)
 
 ##### API Docs:
-+ [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/docs/API.md)
-+ [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/API.md)
-+ [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/docs/API.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/docs/API.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/API.md)
+  + [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/docs/API.md)
 
 ##### Changelogs:
-+ [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/CHANGELOG.md)
-+ [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/CHANGELOG.md)
-+ [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/CHANGELOG.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/CHANGELOG.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/CHANGELOG.md)
+  + [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/CHANGELOG.md)
 
 ##### Type Definitions and Global Functions:
-+ [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/docs/global.md)
-+ [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/global.md)
-+ [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/docs/global.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/docs/global.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/global.md)
+  + [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/docs/global.md)
 
 ## Versioning
 
@@ -87,7 +87,7 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## Author
 
-+ **Justin Collier** - [jpcx](https://github.com/jpcx)
+  + **Justin Collier** - [jpcx](https://github.com/jpcx)
 
 ## License
 
