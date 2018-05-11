@@ -4,7 +4,7 @@ Provides a collection of tools for performing operations on deeply nested object
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.1/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.2.1/index.js#L7)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.2/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.2.2/index.js#L7)
 
 ### Namespaces
 
@@ -32,8 +32,8 @@ Provides an interface to the deep-props submodules.
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.1/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.2.1/index.js#L15)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.2/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.2.2/index.js#L15)
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props/blob/0.2.1/README.md)
+## [Home](https://github.com/jpcx/deep-props/blob/0.2.2/README.md)
