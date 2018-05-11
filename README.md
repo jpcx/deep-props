@@ -63,23 +63,23 @@ Global docs contain all type definitions and functions used internally.
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.1/README.md)
 
 ##### API Docs:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.1/docs/API.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.2/docs/API.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.2/docs/API.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/API.md)
 
 ##### Changelogs:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.1/CHANGELOG.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.2/CHANGELOG.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.2/CHANGELOG.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.1/CHANGELOG.md)
 
 ##### Type Definitions and Global Functions:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.1/docs/global.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.2/docs/global.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.2/global.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md)
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props/blob/0.2.1/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props/blob/0.2.2/CHANGELOG.md).
 
 ## Contribution
 
@@ -91,4 +91,4 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/0.2.1/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/0.2.2/LICENSE) file for details
