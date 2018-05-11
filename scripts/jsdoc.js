@@ -159,8 +159,8 @@ const localPathToURL = (path, mappings) => Object.values(
  * @param   {Object} mappings - Map of local HTML locations to desired MD file names, locations, remote URLs, and version numbers.
  * @returns {string} Formatted string.
  */
-const addsHomeFooterHorizontal = (string, path, mappings) => string.replace(
-  /^\[Home\]\(index\.html\)\n-*\n/gm,
+const formatHomeFooter = (string, path, mappings) => string.replace(
+  /^\[Home\]\(index\.html\)\n-*\n[\s\S]*/gm,
   `<hr>\n\n## [Home](${localPathToURL(path, mappings)}/README.md)\n`
 )
 
@@ -352,6 +352,18 @@ const replaceSourceCodeLinks = (string, mappings) => string.split(
 )
 
 /**
+ * Replaces link to tagged top-level module with link to top-level master readme.
+ *
+ * @private
+ * @param {string}   string   - Search string.
+ * @returns {string} Formatted string.
+ */
+const replaceTopLevelLink = string => string.replace(
+  /^(# \[[\s\S]*?\]\((?:https:\/\/)?(?:www.)?github.com\/[\s\S]*?)\/blob\/[\s\S]*?\/[\s\S]*?\)/gm,
+  '$1/blob/master/README.md)'
+)
+
+/**
  * Applies any post-processing filters to markdown.
  *
  * @private
@@ -369,10 +381,11 @@ const postProcess = (markdown, mappings) => Object.keys(
     proc[key] = fixTableLineBreaks(proc[key])
     proc[key] = fixAsterixBullets(proc[key])
     proc[key] = removeTopNamespace(proc[key])
-    proc[key] = addsHomeFooterHorizontal(proc[key], key, mappings)
+    proc[key] = formatHomeFooter(proc[key], key, mappings)
     proc[key] = formatSourceCodeURLs(proc[key])
     proc[key] = replaceModuleLinks(proc[key], mappings)
     proc[key] = replaceSourceCodeLinks(proc[key], mappings)
+    proc[key] = replaceTopLevelLink(proc[key], mappings)
     proc[key] = proc[key].trim()
     return proc
   },

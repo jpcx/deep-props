@@ -1,4 +1,4 @@
-# [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/README.md).extract
+# [deep-props](https://github.com/jpcx/deep-props/blob/master/README.md).extract
 
 [![NPM](https://nodei.co/npm/deep-props.extract.png)](https://nodei.co/npm/deep-props.extract/)
 
@@ -14,7 +14,7 @@ Circular references or otherwise duplicate references to objects will be signifi
 
 ## Getting Started
 
-The following installation, testing, and deployment instructions assume that deep-props.extract will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/README.md). Functionality of the module remains the same in both cases.
+The following installation, testing, and deployment instructions assume that deep-props.extract will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/master/README.md). Functionality of the module remains the same in both cases.
 
 ### Prerequisites
 
@@ -153,8 +153,8 @@ extract(data, { stepwise: true, descriptors: true, permissions: true })
 ## Documentation
 
 ### See:
-* [API Docs](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/API.md)
-* [Global Docs](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/global.md)
+  + [API Docs](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/API.md)
+  + [Global Docs](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/global.md)
 
 ### Module: extract
 
@@ -174,7 +174,7 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## Author
 
-* **Justin Collier** - [jpcx](https://github.com/jpcx)
+  + **Justin Collier** - [jpcx](https://github.com/jpcx)
 
 ## License
 
