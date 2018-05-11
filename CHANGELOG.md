@@ -1,6 +1,19 @@
 Changelog
 =========
 
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/jpcx/deep-props/tree/0.2.3) (2018-05-11)
+
+| __[Changes since 0.2.2](https://github.com/jpcx/deep-props/compare/0.2.2...0.2.3)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.3) | [README](https://github.com/jpcx/deep-props/tree/0.2.3/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.3.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.3.tar.gz) |
+| --- | --- |
+
+#### Bugfixes
+  + __docs:__ Reclassified package-lock additions as bugfixes in changelog.
+  + __get/docs:__ Clarified map insertion order documentation.
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/jpcx/deep-props/tree/0.2.2) (2018-05-11)
 
@@ -29,10 +42,8 @@ Changelog
 #### Bugfixes
   + __docs:__ Modified document generation scripts and templates to allow for independent submodule releases.
   + __NPM:__ Modified document generation scripts to create newline at end of JSON files (package.json).
-  + __get/docs:__ Fixed inaccurate description and examples.
-
-#### Features
   + __extract/NPM:__ Added package-lock.json.
+  + __get/docs:__ Fixed inaccurate description and examples.
   + __get/NPM:__ Added package-lock.json.
 
 <a name="0.2.0"></a>
