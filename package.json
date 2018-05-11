@@ -1,6 +1,6 @@
 {
   "name": "deep-props",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
   "engines": {
     "node": ">=8.7.0"

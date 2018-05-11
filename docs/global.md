@@ -4,95 +4,15 @@ Provides a collection of tools for performing operations on deeply nested object
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L7)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.1/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.2.1/index.js#L7)
 
 ### Namespaces
 
-[extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
+[extract](https://github.com/jpcx/deep-props.extract/blob/0.1.2/docs/global.md)
 
-[get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
+[get](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md)
 
 ### Type Definitions
-
-<a name="~Container"></a>
-#### Container
-
-Container object used as a target for child property extraction.
-
-##### Type:
-
-*   Object | Array | Map | WeakMap | Set | WeakSet | [deep-props~Custom](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Custom)
-
-Source:
-
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 38](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L38)
-
-<a name="~Custom"></a>
-#### Custom
-
-Custom dataset for use as a [Container](#~Container). May be accessed via valid customizer functions.
-
-##### Type:
-
-*   \*
-
-Source:
-
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L15)
-
-##### Example
-
-```js
-(() => {
-  class CustomDataStructure {
-    constructor(array) {
-      this.get = i => array[i]
-      this.getValues = () => array
-      this.push = x => array.push(x)
-    }
-  }
-  return new CustomDataStructure([ 'foo', 'bar' ])
-})()
-```
-
-<a name="~Host"></a>
-#### Host
-
-A non-primitive [Container](#~Container) which represents the root of a given path.
-
-##### Type:
-
-*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container)
-
-Source:
-
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 44](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L44)
-
-<a name="~Key"></a>
-#### Key
-
-Key used for accessing a child property within a container. When its value is `'__proto__'`, it is used as a stand-in for `Object.getPrototypeOf()`.
-
-##### Type:
-
-*   string | [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container)
-
-Source:
-
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 32](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L32)
-
-<a name="~ResultGenerator"></a>
-#### ResultGenerator
-
-Generator object which yields stepwise operation results.
-
-##### Type:
-
-*   Object
-
-Source:
-
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 50](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L50)
 
 <a name="~Submodules"></a>
 #### Submodules
@@ -107,25 +27,13 @@ Provides an interface to the deep-props submodules.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `extract` | [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md) | Extract module. |
-| `get` | [deep-props.get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md) | Get module. |
+| `extract` | [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.2/docs/global.md) | Extract module. |
+| `get` | [deep-props.get](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md) | Get module. |
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.0/index.js), [line 56](https://github.com/jpcx/deep-props/blob/0.2.0/index.js#L56)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.2.1/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.2.1/index.js#L15)
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props/blob/0.2.0/README.md)
-
-### Modules
-
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/API.md)
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
-
-### Namespaces
-
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
+## [Home](https://github.com/jpcx/deep-props/blob/0.2.1/README.md)

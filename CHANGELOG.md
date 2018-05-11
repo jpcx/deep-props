@@ -1,6 +1,28 @@
 Changelog
 =========
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/jpcx/deep-props/tree/0.2.1) (2018-05-10)
+
+| __[Changes since 0.2.0](https://github.com/jpcx/deep-props/compare/0.2.0...0.2.1)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.1) | [README](https://github.com/jpcx/deep-props/tree/0.2.1/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.1.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.1.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __extract:__ [0.1.1](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.1) -> [0.1.2](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.2)
+  + __get:__ [0.1.0](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.0) -> [0.1.1](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.1)
+
+#### Bugfixes
+  + __docs:__ Modified document generation scripts and templates to allow for independent submodule releases.
+  + __NPM:__ Modified document generation scripts to create newline at end of JSON files (package.json).
+  + __get/docs:__ Fixed inaccurate description and examples.
+
+#### Features
+  + __extract/NPM:__ Added package-lock.json.
+  + __get/NPM:__ Added package-lock.json.
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://github.com/jpcx/deep-props/tree/0.2.0) (2018-05-09)
 
@@ -11,18 +33,18 @@ Changelog
 | --- | --- |
 
 #### Bumps
-+ __extract:__ [0.1.0](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.0) -> [0.1.1](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.1)
-
-#### Features
-+ __repo:__ Moved submodules to dedicated repositories. Using submodule approach.
-+ __API:__ Added deep-props.get submodule.
-+ __docs:__ Added changelog.
-+ __docs:__ Improved documentation generation scripts.
-+ __extract/docs:__ Improved documentation.
-+ __get:__ Submodule created.
+  + __extract:__ [0.1.0](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.0) -> [0.1.1](https://github.com/jpcx/deep-props.extract/blob/0.1.1/CHANGELOG.md#0.1.1)
 
 #### Bugfixes
-+ __docs:__ Replaced (U+2264) symbol with '<=' ([853bc99](https://github.com/jpcx/deep-props/commit/853bc99e0068f5d55acac1d5785eb50f8ceca3dc))
+  + __docs:__ Replaced (U+2264) symbol with '<=' ([853bc99](https://github.com/jpcx/deep-props/commit/853bc99e0068f5d55acac1d5785eb50f8ceca3dc))
+
+#### Features
+  + __repo:__ Moved submodules to dedicated repositories. Using submodule approach.
+  + __API:__ Added deep-props.get submodule.
+  + __docs:__ Added changelog.
+  + __docs:__ Improved documentation generation scripts.
+  + __extract/docs:__ Improved documentation.
+  + __get:__ Submodule created.
 
 <a name="0.1.0"></a>
 ## [0.1.0](https://github.com/jpcx/deep-props/tree/0.1.0) (2018-05-04)
