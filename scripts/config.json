@@ -127,6 +127,46 @@
         "notation"
       ],
       "dependencies": {}
+    },
+    "deep-props.set": {
+      "repo": "https://github.com/jpcx/deep-props.set",
+      "tag": "0.1.0",
+      "node": "8.7.0",
+      "jsdoc": [
+        {
+          "origin": "module-set.html",
+          "destination": {
+            "local": "libs/set",
+            "path": "docs",
+            "file": "API.md"
+          }
+        },
+        {
+          "origin": "deep-props.set.html",
+          "destination": {
+            "local": "libs/set",
+            "path": "docs",
+            "file": "global.md"
+          }
+        }
+      ],
+      "description": "Sets a value within a nested data structure given a path. Creates structure if the path is not found.",
+      "keywords": [
+        "setter",
+        "data",
+        "collection",
+        "nested",
+        "property",
+        "object",
+        "array",
+        "map",
+        "set",
+        "weakmap",
+        "bracket",
+        "dot",
+        "notation"
+      ],
+      "dependencies": {}
     }
   }
 }
