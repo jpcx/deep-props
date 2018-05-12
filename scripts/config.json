@@ -150,7 +150,7 @@
           }
         }
       ],
-      "description": "Sets a value within a nested data structure given a path. Creates structure if the path is not found.",
+      "description": "Sets a value within a nested data structure given a path. Creates structure if the path is not found. Supports setting values within Objects, Arrays, Maps, Sets, and WeakMaps; supports creation of Objects, Arrays, and Maps.",
       "keywords": [
         "setter",
         "data",
@@ -166,7 +166,9 @@
         "dot",
         "notation"
       ],
-      "dependencies": {}
+      "dependencies": {
+        "deep-props.get": "^0.1.3"
+      }
     }
   }
 }
