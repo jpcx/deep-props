@@ -1,10 +1,26 @@
 Changelog
 =========
 
+<a name="0.2.5"></a>
+## [0.2.5](https://github.com/jpcx/deep-props/tree/0.2.5) (2018-05-11)
+
+| __[Changes since 0.2.4](https://github.com/jpcx/deep-props/compare/0.2.4...0.2.5)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.5) | [README](https://github.com/jpcx/deep-props/tree/0.2.5/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.5.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.5.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __get:__ [0.1.2](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.2) -> [0.1.3](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.3)
+
+#### Bugfixes
+  + __docs:__ Fixed 'changes since' text in changelog.
+  + __get/docs:__ Updated JSDoc description.
+
 <a name="0.2.4"></a>
 ## [0.2.4](https://github.com/jpcx/deep-props/tree/0.2.4) (2018-05-11)
 
-| __[Changes since 0.2.2](https://github.com/jpcx/deep-props/compare/0.2.3...0.2.4)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.4) | [README](https://github.com/jpcx/deep-props/tree/0.2.4/README.md) |
+| __[Changes since 0.2.3](https://github.com/jpcx/deep-props/compare/0.2.3...0.2.4)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.4) | [README](https://github.com/jpcx/deep-props/tree/0.2.4/README.md) |
 | --- | --- | --- |
 
 | [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.4.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.4.tar.gz) |
