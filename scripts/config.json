@@ -4,7 +4,7 @@
   "packages": {
     "deep-props": {
       "repo": "https://github.com/jpcx/deep-props",
-      "tag": "0.2.5",
+      "tag": "0.2.6",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -89,7 +89,7 @@
     },
     "deep-props.get": {
       "repo": "https://github.com/jpcx/deep-props.get",
-      "tag": "0.1.3",
+      "tag": "0.1.4",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -109,7 +109,7 @@
           }
         }
       ],
-      "description": "Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Sets, WeakMaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.",
+      "description": "Retrieves a nested property from a data source. Supports Objects, Arrays, Maps, Sets, WeakMaps, WeakSets, and JSON. Supports the use of a custom extraction function to handle unsupported datasets.",
       "keywords": [
         "get",
         "data",

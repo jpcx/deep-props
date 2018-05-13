@@ -1,6 +1,22 @@
 Changelog
 =========
 
+<a name="0.2.6"></a>
+## [0.2.6](https://github.com/jpcx/deep-props/tree/0.2.6) (2018-05-12)
+
+| __[Changes since 0.2.5](https://github.com/jpcx/deep-props/compare/0.2.5...0.2.6)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.2.6) | [README](https://github.com/jpcx/deep-props/tree/0.2.6/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.2.6.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.2.6.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __get:__ [0.1.3](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.3) -> [0.1.4](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.4)
+
+#### Bugfixes
+  + __get/docs:__ Fixed copypaste errors from deep-props.extract.
+  + __get/docs:__ Documented WeakSet usage.
+
 <a name="0.2.5"></a>
 ## [0.2.5](https://github.com/jpcx/deep-props/tree/0.2.5) (2018-05-11)
 

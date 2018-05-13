@@ -8,7 +8,7 @@ See the [usage examples](#usage) for an overview of different types of data stru
 
 ## Getting Started
 
-The following installation, testing, and deployment instructions assume that deep-props.extract will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/master/README.md). Functionality of the module remains the same in both cases.
+The following installation, testing, and deployment instructions assume that deep-props.get will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/master/README.md). Functionality of the module remains the same in both cases.
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ const nest = new Map().set(
 )
 
 // All return 'thud'
-// Note: this path must either be an array of Object references or descriptions of insertion order.
+// Note: this path must either be an array of strict references or descriptions of insertion order.
 get(nest, [ keyA, keyB, keyC ])
 get(nest, '0.0.0')
 get(nest, [ 0, 0, 0 ])
@@ -134,10 +134,30 @@ const nest = new Set().add(
 )
 
 // All return 'foo'
-// Note: values may be accessed via insertion order or actual references.
+// Note: values may be accessed via insertion order or strict references.
 get(nest, '0.0.0.0')
 get(nest, [ 0, 0, 0, 0 ])
 get(nest, [ setA, setB, setC, 0 ])
+```
+
+**Nested WeakSet Extraction**
+```js
+const wsA = new WeakSet()
+const wsB = new WeakSet()
+const wsC = new WeakSet()
+const obj = { foo: 'bar' }
+
+const nest = new WeakSet().add(
+  wsA.add(
+    wsB.add(
+      wsC.add(obj)
+    )
+  )
+)
+
+// Returns { foo: 'bar' }
+// Note: values may only be accessed via an array of strict references.
+get(nest, [ wsA, wsB, wsC, obj ])
 ```
 
 **Extraction from JSON**
