@@ -12,6 +12,8 @@ Source:
 
 [get](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md)
 
+[set](https://github.com/jpcx/deep-props.set/blob/0.1.0/docs/global.md)
+
 ### Type Definitions
 
 <a name="~Submodules"></a>

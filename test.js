@@ -26,15 +26,18 @@ const master = require('./')
 
 const extractTests = require('./libs/extract/test.js')
 const getTests = require('./libs/get/test.js')
+const setTests = require('./libs/set/test.js')
 
 const extractResults = extractTests.run(master.extract)
 const getResults = getTests.run(master.get)
+const setResults = setTests.run(master.set)
 
 let totalTestsAttempt = 0
 let numFailed = 0
 
 totalTestsAttempt += extractResults.totalTestsAttempt
 totalTestsAttempt += getResults.totalTestsAttempt
+totalTestsAttempt += setResults.totalTestsAttempt
 
 if (extractResults.numFailed > 0) {
   numFailed += extractResults.numFailed
@@ -66,6 +69,23 @@ if (getResults.numFailed > 0) {
     ANSI_BOLD + ANSI_RED + 'Get module test failure!\n' + ANSI_RESET
   )
   for (let e of getResults.errors) {
+    dirDeep(e)
+  }
+}
+
+if (setResults.numFailed > 0) {
+  numFailed += setResults.numFailed
+
+  console.log(
+    `\n========================================${
+      '========================================'
+    }\n`
+  )
+
+  console.log(
+    ANSI_BOLD + ANSI_RED + 'Set module test failure!\n' + ANSI_RESET
+  )
+  for (let e of setResults.errors) {
     dirDeep(e)
   }
 }

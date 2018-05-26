@@ -128,6 +128,49 @@
         "notation"
       ],
       "dependencies": {}
+    },
+    "deep-props.set": {
+      "repo": "https://github.com/jpcx/deep-props.set",
+      "tag": "0.1.0",
+      "node": "8.7.0",
+      "jsdoc": [
+        {
+          "origin": "module-set.html",
+          "destination": {
+            "local": "libs/set",
+            "path": "docs",
+            "file": "API.md"
+          }
+        },
+        {
+          "origin": "deep-props.set.html",
+          "destination": {
+            "local": "libs/set",
+            "path": "docs",
+            "file": "global.md"
+          }
+        }
+      ],
+      "description": "Sets values within nested objects; creates structure if not found. Supports setting within Objects, Arrays, Maps, Sets, WeakMaps, and WeakSets; supports creation of Objects, Arrays, and Maps.",
+      "keywords": [
+        "setter",
+        "data",
+        "collection",
+        "nested",
+        "property",
+        "object",
+        "array",
+        "map",
+        "set",
+        "weakmap",
+        "weakset",
+        "dot",
+        "bracket",
+        "notation"
+      ],
+      "dependencies": {
+        "deep-props.get": "^0.1.4"
+      }
     }
   }
 }
