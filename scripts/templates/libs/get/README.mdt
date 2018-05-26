@@ -193,7 +193,7 @@ const nest = {
 const wsNest = new WeakSet().add(nest)
 
 // returns 'quz'
-// Array path is required here because strict references are required
+// Array path containing strict references is required here
 get(wsNest, [ nest, 'foo', 0, 'bar', 0, wmKey, 'baz', 0, 'qux' ])
 ```
 
