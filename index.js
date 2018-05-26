@@ -5,7 +5,7 @@
  */
 
 /**
- * Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
+ * Provides a collection of non-recursive tools for performing operations on deeply nested object properties and prototypes. Allows for custom execution settings including non-native dataset handling.
  *
  * @namespace deep-props
  */
@@ -18,6 +18,7 @@
  * @typedef  {Object} deep-props~Submodules
  * @property {deep-props.extract} extract - Extract module.
  * @property {deep-props.get}     get     - Get module.
+ * @property {deep-props.set}     set     - Set module.
  */
 
 /**
@@ -28,14 +29,17 @@
  * @example
  * // returns {
  * //   extract: [Function: extract],
- * //   get: [Function: get]
+ * //   get: [Function: get],
+ * //   set: [Function: set]
  * // }
  * const props = require('deep-props')
  *
  * const extract = props.extract
  * const get = props.get
+ * const set = props.get
  */
 module.exports = {
   extract: require('./libs/extract'),
-  get: require('./libs/get')
+  get: require('./libs/get'),
+  set: require('./libs/set')
 }

@@ -1,6 +1,28 @@
 Changelog
 =========
 
+<a name="0.3.0"></a>
+## [0.3.0](https://github.com/jpcx/deep-props/tree/0.3.0) (2018-05-26)
+
+| __[Changes since 0.2.6](https://github.com/jpcx/deep-props/compare/0.2.6...0.3.0)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.3.0) | [README](https://github.com/jpcx/deep-props/tree/0.3.0/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.3.0.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.3.0.tar.gz) |
+| --- | --- |
+
+#### Bumps
+  + __extract:__ [0.1.4](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.4) -> [0.1.5](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.5)
+  + __get:__ [0.1.4](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.4) -> [0.1.5](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.5)
+
+#### Bugfixes
+  + __extract/docs:__ Fixed various documentation issues.
+  + __get/docs:__ Fixed various documentation issues.
+  + __docs:__ Fixed various documentation issues.
+
+#### Features
+  + __API:__ Added deep-props.set submodule.
+  + __set:__ Submodule created.
+
 <a name="0.2.6"></a>
 ## [0.2.6](https://github.com/jpcx/deep-props/tree/0.2.6) (2018-05-12)
 
@@ -134,6 +156,7 @@ Changelog
   + __API:__ Module functionality moved to deep-props.extract. See the [readme](https://github.com/jpcx/deep-props/tree/0.1.0/README.md) for more information.
 
 #### Features
+  + __API:__ Added deep-props.extract submodule.
   + __extract:__ Submodule created.
 
 <a name="0.0.8"></a>
