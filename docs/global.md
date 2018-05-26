@@ -1,6 +1,6 @@
 # deep-props
 
-Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.
+Provides a collection of non-recursive tools for performing operations on deeply nested object properties and prototypes. Allows for custom execution settings including non-native dataset handling.
 
 Source:
 
@@ -31,6 +31,7 @@ Provides an interface to the deep-props submodules.
 | --- | --- | --- |
 | `extract` | [deep-props.extract](https://github.com/jpcx/deep-props.extract/blob/0.1.5/docs/global.md) | Extract module. |
 | `get` | [deep-props.get](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md) | Get module. |
+| `set` | [deep-props.set](https://github.com/jpcx/deep-props.set/blob/0.1.0/docs/global.md) | Set module. |
 
 Source:
 
