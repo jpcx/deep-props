@@ -16,6 +16,10 @@ Provides a collection of tools for performing operations on deeply nested object
 
     [![NPM](https://nodei.co/npm/deep-props.get.png?mini=true)](https://nodei.co/npm/deep-props.get/)
     + Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Sets, WeakMaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
+  + __[set](https://github.com/jpcx/deep-props.set/blob/0.1.0/README.md)__
+
+    [![NPM](https://nodei.co/npm/deep-props.set.png?mini=true)](https://nodei.co/npm/deep-props.set/)
+    + Sets values within nested objects; creates structure if not found. Supports setting within Objects, Arrays, Maps, Sets, WeakMaps, and WeakSets; supports creation of Objects, Arrays, and Maps.
 
 ## Getting Started
 
@@ -48,6 +52,7 @@ npm test --prefix /path/to/node_modules/deep-props
 const props = require('deep-props')
 const extract = props.extract
 const get = props.get
+const set = props.set
 ```
 
 ## Documentation
@@ -61,21 +66,25 @@ Global docs contain all type definitions and functions used internally.
 ##### README Files:
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.4/README.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.3/README.md)
+  + [set](https://github.com/jpcx/deep-props.set/blob/0.1.0/README.md)
 
 ##### API Docs:
   + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.5/docs/API.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.4/docs/API.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/API.md)
+  + [set](https://github.com/jpcx/deep-props.set/blob/0.1.0/docs/API.md)
 
 ##### Changelogs:
   + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.5/CHANGELOG.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.4/CHANGELOG.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.3/CHANGELOG.md)
+  + [set](https://github.com/jpcx/deep-props.set/blob/0.1.0/CHANGELOG.md)
 
 ##### Type Definitions and Global Functions:
   + [deep-props](https://github.com/jpcx/deep-props/blob/0.2.5/docs/global.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.4/global.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md)
+  + [set](https://github.com/jpcx/deep-props.set/blob/0.1.0/docs/global.md)
 
 ## Versioning
 
