@@ -8,7 +8,7 @@ See the [usage examples](#usage) for an overview of different types of data stru
 
 ## Getting Started
 
-The following installation, testing, and deployment instructions assume that deep-props.get will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/master/README.md). Functionality of the module remains the same in both cases.
+The following installation, testing, and deployment instructions assume that deep-props.get will be installed as a standalone module. For instructions on how to install and test all deep-props modules, please [refer to the main README](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/README.md). Functionality of the module remains the same in both cases.
 
 ### Prerequisites
 
