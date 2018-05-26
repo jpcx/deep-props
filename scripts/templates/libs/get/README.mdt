@@ -12,7 +12,7 @@ The following installation, testing, and deployment instructions assume that dee
 
 ### Prerequisites
 
-Node.JS version 6.0.0 or above.
+Node.JS version ___{alias:deep-props.get/node}___ or above.
 
 ### Installing
 
@@ -22,7 +22,7 @@ npm install deep-props.get
 
 ### Testing
 
-The following command will test the package for errors. It prints a large selection of examples to the console; scroll through its output if you want to learn more about the utility.
+The following command will test the package for errors. It prints a selection of examples to the console; scroll through its output if you want to learn more about the utility.
 
 ```console
 npm test --prefix /path/to/node_modules/deep-props.get
@@ -94,7 +94,7 @@ const nest = new Map().set(
 )
 
 // All return 'thud'
-// Note: this path must either be an array of strict references or descriptions of insertion order.
+// Note: path must either be an array of strict references or descriptions of insertion order.
 get(nest, [ keyA, keyB, keyC ])
 get(nest, '0.0.0')
 get(nest, [ 0, 0, 0 ])
@@ -175,23 +175,26 @@ const wmKey = { baz: 'baz' }
 const nest = {
   foo: [
     new Map().set(
-      'bar', new WeakMap().set(
-        wmKey, JSON.stringify({
-          baz: [
-            {
-              qux: 'quz'
-            }
-          ]
-        })
-      )
+      'bar', new Set([
+        new WeakMap().set(
+          wmKey, JSON.stringify({
+            baz: [
+              {
+                qux: 'quz'
+              }
+            ]
+          })
+        )
+      ])
     )
   ]
 }
 
+const wsNest = new WeakSet().add(nest)
 
 // returns 'quz'
-// Array path is required here, because wmKey needs to be a reference
-get(nest, ['foo', 0, 'bar', wmKey, 'baz', 0, 'qux'])
+// Array path is required here because strict references are required
+get(wsNest, [ nest, 'foo', 0, 'bar', 0, wmKey, 'baz', 0, 'qux' ])
 ```
 
 <a name="customizer_example"></a>

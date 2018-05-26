@@ -4,7 +4,7 @@
   "packages": {
     "deep-props": {
       "repo": "https://github.com/jpcx/deep-props",
-      "tag": "0.2.6",
+      "tag": "0.3.0",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -24,7 +24,7 @@
           }
         }
       ],
-      "description": "Provides a collection of tools for performing operations on deeply nested object properties, prototypes, and object keys. Avoids stack limit violations by using task queues rather than recursion. Allows for custom execution settings including non-native dataset handling.",
+      "description": "Provides a collection of non-recursive tools for performing operations on deeply nested object properties and prototypes. Allows for custom execution settings including non-native dataset handling.",
       "keywords": [
         "unpack",
         "deep",
@@ -52,7 +52,7 @@
     },
     "deep-props.extract": {
       "repo": "https://github.com/jpcx/deep-props.extract",
-      "tag": "0.1.4",
+      "tag": "0.1.5",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -72,7 +72,7 @@
           }
         }
       ],
-      "description": "Creates an array of deep paths and properties associated with an object. Non-recursively iterates through deep objects until an endpoint is reached. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets automatically.",
+      "description": "Non-recursively creates an array of deep paths and properties within an object. Optionally unpacks prototypes and non-enumerable property descriptors. Supports Objects, Arrays, Maps, and Sets.",
       "keywords": [
         "unpack",
         "deep",
@@ -89,7 +89,7 @@
     },
     "deep-props.get": {
       "repo": "https://github.com/jpcx/deep-props.get",
-      "tag": "0.1.4",
+      "tag": "0.1.5",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -123,8 +123,8 @@
         "set",
         "weakmap",
         "json",
-        "bracket",
         "dot",
+        "bracket",
         "notation"
       ],
       "dependencies": {}
@@ -169,7 +169,7 @@
         "notation"
       ],
       "dependencies": {
-        "deep-props.get": "^0.1.4"
+        "deep-props.get": "^0.1.5"
       }
     }
   }

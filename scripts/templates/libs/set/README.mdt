@@ -22,7 +22,7 @@ npm install deep-props.set
 
 ### Testing
 
-The following command will test the package for errors. It prints a large selection of examples to the console; scroll through its output if you want to learn more about the utility.
+The following command will test the package for errors. It prints a selection of examples to the console; scroll through its output if you want to learn more about the utility.
 
 ```console
 npm test --prefix /path/to/node_modules/deep-props.set
