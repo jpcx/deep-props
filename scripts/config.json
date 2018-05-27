@@ -4,7 +4,7 @@
   "packages": {
     "deep-props": {
       "repo": "https://github.com/jpcx/deep-props",
-      "tag": "0.3.1",
+      "tag": "0.3.2",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -131,7 +131,7 @@
     },
     "deep-props.set": {
       "repo": "https://github.com/jpcx/deep-props.set",
-      "tag": "0.1.1",
+      "tag": "0.1.2",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -172,5 +172,8 @@
         "deep-props.get": "^0.1.6"
       }
     }
+  },
+  "customAliases": {
+    "deep-props.set_getReq": "0.1.6"
   }
 }
