@@ -4,7 +4,7 @@
   "packages": {
     "deep-props": {
       "repo": "https://github.com/jpcx/deep-props",
-      "tag": "0.3.0",
+      "tag": "0.3.1",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -52,7 +52,7 @@
     },
     "deep-props.extract": {
       "repo": "https://github.com/jpcx/deep-props.extract",
-      "tag": "0.1.5",
+      "tag": "0.1.6",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -89,7 +89,7 @@
     },
     "deep-props.get": {
       "repo": "https://github.com/jpcx/deep-props.get",
-      "tag": "0.1.5",
+      "tag": "0.1.6",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -131,7 +131,7 @@
     },
     "deep-props.set": {
       "repo": "https://github.com/jpcx/deep-props.set",
-      "tag": "0.1.0",
+      "tag": "0.1.1",
       "node": "8.7.0",
       "jsdoc": [
         {
@@ -169,7 +169,7 @@
         "notation"
       ],
       "dependencies": {
-        "deep-props.get": "^0.1.5"
+        "deep-props.get": "^0.1.6"
       }
     }
   }

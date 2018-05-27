@@ -1,6 +1,18 @@
 Changelog
 =========
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/jpcx/deep-props/tree/0.3.1) (2018-05-26)
+
+| __[Changes since 0.3.0](https://github.com/jpcx/deep-props/compare/0.3.0...0.3.1)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.3.1) | [README](https://github.com/jpcx/deep-props/tree/0.3.1/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.3.1.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.3.1.tar.gz) |
+| --- | --- |
+
+#### Bugfixes
+  + __NPM:__ Removed submodule node_modules folders from NPM release.
+
 <a name="0.3.0"></a>
 ## [0.3.0](https://github.com/jpcx/deep-props/tree/0.3.0) (2018-05-26)
 
