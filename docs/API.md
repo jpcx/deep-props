@@ -5,7 +5,7 @@ Exports the deep-props submodules.
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.1/index.js), [line 24](https://github.com/jpcx/deep-props/blob/0.3.1/index.js#L24)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.2/index.js), [line 24](https://github.com/jpcx/deep-props/blob/0.3.2/index.js#L24)
 
 ##### Returns:
 
@@ -13,7 +13,7 @@ Object containing submodules.
 
 Type
 
-[deep-props~Submodules](https://github.com/jpcx/deep-props/blob/0.3.1/docs/global.md#~Submodules)
+[deep-props~Submodules](https://github.com/jpcx/deep-props/blob/0.3.2/docs/global.md#~Submodules)
 
 ##### Example
 
@@ -32,4 +32,4 @@ const set = props.get
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props/blob/0.3.1/README.md)
+## [Home](https://github.com/jpcx/deep-props/blob/0.3.2/README.md)
