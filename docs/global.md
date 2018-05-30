@@ -4,7 +4,7 @@ Provides a collection of non-recursive tools for performing operations on deeply
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.2/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.3.2/index.js#L7)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.3/index.js), [line 7](https://github.com/jpcx/deep-props/blob/0.3.3/index.js#L7)
 
 ### Namespaces
 
@@ -35,8 +35,8 @@ Provides an interface to the deep-props submodules.
 
 Source:
 
-*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.2/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.3.2/index.js#L15)
+*   [deep-props/index.js](https://github.com/jpcx/deep-props/blob/0.3.3/index.js), [line 15](https://github.com/jpcx/deep-props/blob/0.3.3/index.js#L15)
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props/blob/0.3.2/README.md)
+## [Home](https://github.com/jpcx/deep-props/blob/0.3.3/README.md)

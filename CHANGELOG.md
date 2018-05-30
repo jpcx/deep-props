@@ -1,6 +1,19 @@
 Changelog
 =========
 
+<a name="0.3.3"></a>
+## [0.3.3](https://github.com/jpcx/deep-props/tree/0.3.3) (2018-05-30)
+
+| __[Changes since 0.3.2](https://github.com/jpcx/deep-props/compare/0.3.2...0.3.3)__ | [Release Notes](https://github.com/jpcx/deep-props/releases/tag/0.3.3) | [README](https://github.com/jpcx/deep-props/tree/0.3.3/README.md) |
+| --- | --- | --- |
+
+| [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.3.3.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.3.3.tar.gz) |
+| --- | --- |
+
+#### Features
+  + __docs:__ Fixed link to extract global.md in README.
+  + __docs:__ Added bumps to CHANGELOG for last two releases.
+
 <a name="0.3.2"></a>
 ## [0.3.2](https://github.com/jpcx/deep-props/tree/0.3.2) (2018-05-26)
 
@@ -9,6 +22,9 @@ Changelog
 
 | [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.3.2.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.3.2.tar.gz) |
 | --- | --- |
+
+#### Bumps
+  + __set:__ [0.1.1](https://github.com/jpcx/deep-props.set/blob/master/CHANGELOG.md#0.1.1) -> [0.1.2](https://github.com/jpcx/deep-props.set/blob/master/CHANGELOG.md#0.1.2)
 
 #### Features
   + __set/docs:__ Clarified README.
@@ -21,6 +37,11 @@ Changelog
 
 | [Source Code (zip)](https://github.com/jpcx/deep-props/archive/0.3.1.zip) | [Source Code (tar.gz)](https://github.com/jpcx/deep-props/archive/0.3.1.tar.gz) |
 | --- | --- |
+
+#### Bumps
+  + __extract:__ [0.1.5](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.5) -> [0.1.6](https://github.com/jpcx/deep-props.extract/blob/master/CHANGELOG.md#0.1.6)
+  + __get:__ [0.1.5](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.5) -> [0.1.6](https://github.com/jpcx/deep-props.get/blob/master/CHANGELOG.md#0.1.6)
+  + __set:__ [0.1.0](https://github.com/jpcx/deep-props.set/blob/master/CHANGELOG.md#0.1.0) -> [0.1.1](https://github.com/jpcx/deep-props.set/blob/master/CHANGELOG.md#0.1.1)
 
 #### Bugfixes
   + __NPM:__ Removed submodule node_modules folders from NPM release.
