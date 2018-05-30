@@ -1,6 +1,6 @@
 {
   "name": "deep-props",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Provides a collection of non-recursive tools for performing operations on deeply nested object properties and prototypes. Allows for custom execution settings including non-native dataset handling.",
   "engines": {
     "node": ">=8.7.0"

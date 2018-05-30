@@ -69,26 +69,26 @@ Global docs contain all type definitions and functions used internally.
   + [set](https://github.com/jpcx/deep-props.set/blob/0.1.2/README.md)
 
 ##### API Docs:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.2/docs/API.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.3/docs/API.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.6/docs/API.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.6/docs/API.md)
   + [set](https://github.com/jpcx/deep-props.set/blob/0.1.2/docs/API.md)
 
 ##### Changelogs:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.2/CHANGELOG.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.3/CHANGELOG.md)
   + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.6/CHANGELOG.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.6/CHANGELOG.md)
   + [set](https://github.com/jpcx/deep-props.set/blob/0.1.2/CHANGELOG.md)
 
 ##### Type Definitions and Global Functions:
-  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.2/docs/global.md)
-  + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.6/global.md)
+  + [deep-props](https://github.com/jpcx/deep-props/blob/0.3.3/docs/global.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.6/docs/global.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/0.1.6/docs/global.md)
   + [set](https://github.com/jpcx/deep-props.set/blob/0.1.2/docs/global.md)
 
 ## Versioning
 
-Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props/blob/0.3.2/CHANGELOG.md).
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props/blob/0.3.3/CHANGELOG.md).
 
 ## Contribution
 
@@ -100,4 +100,4 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/0.3.2/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props/blob/0.3.3/LICENSE) file for details

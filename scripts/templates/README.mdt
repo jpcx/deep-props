@@ -82,7 +82,7 @@ Global docs contain all type definitions and functions used internally.
 
 ##### Type Definitions and Global Functions:
   + [deep-props](https://github.com/jpcx/deep-props/blob/___{alias:deep-props/tag}___/docs/global.md)
-  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/global.md)
+  + [extract](https://github.com/jpcx/deep-props.extract/blob/___{alias:deep-props.extract/tag}___/docs/global.md)
   + [get](https://github.com/jpcx/deep-props.get/blob/___{alias:deep-props.get/tag}___/docs/global.md)
   + [set](https://github.com/jpcx/deep-props.set/blob/___{alias:deep-props.set/tag}___/docs/global.md)
 
